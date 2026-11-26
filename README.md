@@ -1,13 +1,24 @@
 # SaaS
 
-SaaS 프로젝트와 기획서(PRD)를 정리하는 보관함입니다.
+고객 대상(1차) → 분야(2차) 기준으로 정리한 SaaS 프로젝트와 기획서 보관함입니다.
 
 - **페이지**: https://jake12733.github.io/saas-archive/
 
+## 분류 구조
+
+- **B2B**: 기업·팀 대상 (`업무 자동화 (AX)`, `CRM · 영업`, `협업 · PM`, `CS · 고객지원`, `HRM · 인사`, `ERP · 재무/결제`, `데이터 · 분석`, `의료 · 헬스케어`)
+- **B2C**: 일반 개인 소비자 대상 (`라이프스타일 · 습관`, `콘텐츠 · 미디어`, `교육 · 학습`, `AI 어시스턴트`, `금융 · 자산관리`)
+- **B2B2C**: 기업/크리에이터에게 툴을 제공하고, 그 고객이 최종 소비자에게 서비스 (`교육 · 에듀테크`, `커머스 · 빌더`, `예약 · 매장운영`, `커뮤니티 · 멤버십`)
+- **Prosumer (B2P)**: 개인으로 가입하지만 업무·수익 창출에 쓰는 1인 사업자·프리랜서 대상 (`마케팅 자동화`, `AI 에이전트`, `디자인 · 콘텐츠`, `생산성 · 워크스페이스`, `프리랜서 · 정산`)
+- **B2D**: 개발자·엔지니어링 팀 대상 (`개발 · 인프라`, `보일러플레이트 · 스타터`, `AI · LLM 툴`, `API · 웹훅`, `보안 · 모니터링`)
+- **B2G (GovTech)**: 정부·지자체·학교 등 공공기관 대상 (`공공 · 복지`, `교육기관 · 학교`, `행정 · 문서관리`, `민원 · 안전`)
+
 ## 프로젝트 목록
 
-| 프로젝트 | 유형 | 상태 | 기획서 |
-|---|---|---|---|
-| AI 마케팅 콘텐츠 자동화 스튜디오 | Micro-SaaS | 기획중 | [01-ai-marketing-micro-saas.md](plans/01-ai-marketing-micro-saas.md) |
-| B2B 리드·CS 자동화(AX) 워크스페이스 | B2B | 기획중 | [02-b2b-ax-workspace.md](plans/02-b2b-ax-workspace.md) |
-| RAG AI 튜터 미니 구독형 클래스 플랫폼 | B2B2C | 기획중 | [03-rag-class-platform.md](plans/03-rag-class-platform.md) |
+| 프로젝트 | 1차 (대상) | 2차 (분야) | 상태 | 기획서 |
+|---|---|---|---|---|
+| Polyship | B2D | 보일러플레이트 · 스타터 | 배포완료 | [polyship.md](plans/polyship.md) |
+| Polyship AI | Prosumer (B2P) | 생산성 · 워크스페이스 | 배포완료 | [polyship-ai.md](plans/polyship-ai.md) |
+| AI 마케팅 콘텐츠 자동화 스튜디오 | Prosumer (B2P) | 마케팅 자동화 | 기획중 | [01-ai-marketing-micro-saas.md](plans/01-ai-marketing-micro-saas.md) |
+| B2B 리드·CS 자동화(AX) 워크스페이스 | B2B | 업무 자동화 (AX) | 기획중 | [02-b2b-ax-workspace.md](plans/02-b2b-ax-workspace.md) |
+| RAG AI 튜터 미니 구독형 클래스 플랫폼 | B2B2C | 교육 · 에듀테크 | 기획중 | [03-rag-class-platform.md](plans/03-rag-class-platform.md) |
