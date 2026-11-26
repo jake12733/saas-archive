@@ -19,6 +19,3 @@
 |---|---|---|---|---|
 | Polyship | B2D | 보일러플레이트 · 스타터 | 배포완료 | [polyship.md](plans/polyship.md) |
 | Polyship AI | Prosumer (B2P) | 생산성 · 워크스페이스 | 배포완료 | [polyship-ai.md](plans/polyship-ai.md) |
-| AI 마케팅 콘텐츠 자동화 스튜디오 | Prosumer (B2P) | 마케팅 자동화 | 기획중 | [01-ai-marketing-micro-saas.md](plans/01-ai-marketing-micro-saas.md) |
-| B2B 리드·CS 자동화(AX) 워크스페이스 | B2B | 업무 자동화 (AX) | 기획중 | [02-b2b-ax-workspace.md](plans/02-b2b-ax-workspace.md) |
-| RAG AI 튜터 미니 구독형 클래스 플랫폼 | B2B2C | 교육 · 에듀테크 | 기획중 | [03-rag-class-platform.md](plans/03-rag-class-platform.md) |
