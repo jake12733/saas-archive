@@ -45,7 +45,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding-bottom: 24px;
+      padding-bottom: 20px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -117,46 +117,59 @@
 
     .btn-danger:hover { background: #fef2f2; }
 
-    /* Toolbar */
-    .toolbar {
+    /* Level 1: Audience Tabs */
+    .nav-block {
+      margin: 20px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      margin: 22px 0 24px;
     }
 
-    .filters {
+    .tabs {
       display: flex;
       align-items: center;
       gap: 6px;
       flex-wrap: wrap;
     }
 
-    .chip {
+    .tab {
       border: 1px solid var(--border);
       background: var(--surface);
       color: var(--muted);
-      border-radius: 999px;
-      padding: 5px 12px;
-      font-size: 12.5px;
-      font-weight: 500;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
       font-family: inherit;
       cursor: pointer;
       transition: all 0.12s;
     }
 
-    .chip:hover { color: var(--text); border-color: var(--border-strong); }
+    .tab:hover { color: var(--text); border-color: var(--border-strong); }
 
-    .chip.active {
+    .tab.active {
       background: var(--accent);
       color: #fff;
       border-color: var(--accent);
     }
 
+    .tab-num {
+      font-weight: 500;
+      opacity: 0.65;
+      margin-left: 3px;
+      font-size: 12px;
+    }
+
     .search {
-      width: 230px;
+      width: 220px;
       max-width: 100%;
       border: 1px solid var(--border);
       background: var(--surface);
@@ -172,21 +185,108 @@
       border-color: var(--accent);
     }
 
-    /* Grid */
+    .cat-desc {
+      margin: 0;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* Level 2: Domain Sub-chips */
+    .subfilters {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding-top: 2px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+
+    .chip:hover { color: var(--text); border-color: var(--border-strong); }
+
+    .chip.active {
+      background: var(--subtle);
+      color: var(--text);
+      border-color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Group Sections */
+    .groups {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .group-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .group-title-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .group-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .group-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .group-add {
+      background: none;
+      border: none;
+      padding: 2px 6px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .group-add:hover { color: var(--text); background: var(--subtle); }
+
+    /* Grid & Card */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px;
+      padding: 16px 18px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 9px;
       transition: border-color 0.15s;
     }
 
@@ -199,22 +299,39 @@
       gap: 8px;
     }
 
-    .type-tag {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: #374151;
+    .meta-badges {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .badge-cat {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
       background: var(--subtle);
-      padding: 2px 8px;
-      border-radius: 6px;
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .badge-domain {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 1px 7px;
+      border-radius: 5px;
     }
 
     .status {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 500;
       color: var(--muted);
+      white-space: nowrap;
     }
 
     .dot {
@@ -230,7 +347,7 @@
 
     .card-title {
       margin: 2px 0 0;
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--text);
@@ -251,7 +368,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
-      margin-top: 2px;
     }
 
     .tag {
@@ -264,7 +380,7 @@
 
     .card-footer {
       margin-top: auto;
-      padding-top: 12px;
+      padding-top: 10px;
       border-top: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -314,11 +430,16 @@
 
     .empty {
       text-align: center;
-      padding: 64px 16px;
+      padding: 48px 16px;
       color: var(--muted);
       background: var(--surface);
       border: 1px dashed var(--border);
       border-radius: var(--radius);
+      font-size: 13.5px;
+    }
+
+    .empty button {
+      margin-top: 12px;
     }
 
     /* Modal */
@@ -346,7 +467,7 @@
       box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
     }
 
-    .modal-sm { max-width: 520px; }
+    .modal-sm { max-width: 560px; }
 
     .modal-head {
       padding: 16px 20px;
@@ -388,9 +509,9 @@
 
     /* PRD Reader */
     .prd-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 16px;
       padding: 12px 14px;
       background: var(--subtle);
       border-radius: 8px;
@@ -399,49 +520,20 @@
       color: var(--muted);
     }
 
-    .prd-meta b { color: var(--text); font-weight: 600; }
+    .prd-meta b { color: var(--text); font-weight: 600; margin-left: 4px; }
 
-    .prd-section {
-      margin-bottom: 18px;
-    }
-
+    .prd-section { margin-bottom: 18px; }
     .prd-section:last-child { margin-bottom: 0; }
-
-    .prd-section h3 {
-      margin: 0 0 6px;
-      font-size: 13.5px;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .prd-section p {
-      margin: 4px 0;
-      font-size: 13.5px;
-      color: #374151;
-      line-height: 1.65;
-    }
-
-    .prd-section ul {
-      margin: 4px 0;
-      padding-left: 18px;
-      font-size: 13.5px;
-      color: #374151;
-      line-height: 1.65;
-    }
-
+    .prd-section h3 { margin: 0 0 6px; font-size: 13.5px; font-weight: 700; color: var(--text); }
+    .prd-section p { margin: 4px 0; font-size: 13.5px; color: #374151; line-height: 1.65; }
+    .prd-section ul { margin: 4px 0; padding-left: 18px; font-size: 13.5px; color: #374151; line-height: 1.65; }
     .prd-section li { margin: 2px 0; }
-
-    .prd-section code {
-      background: var(--subtle);
-      padding: 1px 5px;
-      border-radius: 4px;
-      font-size: 12.5px;
-      font-family: Consolas, Monaco, monospace;
-    }
+    .prd-section code { background: var(--subtle); padding: 1px 5px; border-radius: 4px; font-size: 12.5px; font-family: Consolas, Monaco, monospace; }
 
     /* Form */
-    .form-stack { display: flex; flex-direction: column; gap: 14px; }
+    .form-stack { display: flex; flex-direction: column; gap: 13px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
     .label { display: block; font-size: 12.5px; font-weight: 600; margin-bottom: 5px; color: #374151; }
     .field {
       width: 100%;
@@ -477,7 +569,7 @@
 
     @media (max-width: 580px) {
       .grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+      .form-row, .form-row-3, .prd-meta { grid-template-columns: 1fr; }
       .search { width: 100%; }
     }
   </style>
@@ -497,16 +589,23 @@
       </div>
     </header>
 
-    <!-- Filter & Search -->
-    <section class="toolbar" aria-label="필터 및 검색">
-      <div class="filters" id="typeFilters"></div>
-      <input type="search" id="searchInput" class="search" placeholder="검색 (이름, 스택, 기획서)" />
+    <!-- 1차(고객 대상) + 2차(분야) 필터 -->
+    <section class="nav-block" aria-label="분류 및 검색">
+      <div class="top-bar">
+        <div class="tabs" id="categoryTabs"></div>
+        <input type="search" id="searchInput" class="search" placeholder="검색 (이름, 분야, 스택, 기획서)" />
+      </div>
+      <p class="cat-desc" id="categoryDesc"></p>
+      <div class="subfilters" id="domainChips"></div>
     </section>
 
-    <!-- Project Cards -->
+    <!-- Main Groups -->
     <main>
-      <div class="grid" id="grid"></div>
-      <div class="empty hidden" id="empty">등록된 SaaS 프로젝트가 없습니다.</div>
+      <div class="groups" id="groups"></div>
+      <div class="empty hidden" id="empty">
+        <p style="margin:0;">이 분류에 등록된 SaaS가 아직 없습니다.</p>
+        <button type="button" class="btn btn-primary" id="btnEmptyAdd">+ 이 분류에 SaaS 추가</button>
+      </div>
     </main>
   </div>
 
@@ -523,10 +622,8 @@
       </div>
 
       <div class="modal-body">
-        <!-- Read View -->
         <div id="prdReadView"></div>
 
-        <!-- Edit View -->
         <div id="prdEditView" class="form-stack hidden">
           <div>
             <label class="label" for="eProblem">1. 문제 정의 &amp; 타깃</label>
@@ -538,15 +635,15 @@
           </div>
           <div>
             <label class="label" for="eBusiness">3. 수익 모델 &amp; SaaS 구조</label>
-            <textarea id="eBusiness" rows="3" class="field" placeholder="- 플랜/과금, 멀티테넌시, 권한, 사용량 제한"></textarea>
+            <textarea id="eBusiness" rows="3" class="field" placeholder="- 과금, 멀티테넌시, 권한, 사용량 제한"></textarea>
           </div>
           <div>
             <label class="label" for="eArchitecture">4. 아키텍처 &amp; 기술 선택 이유</label>
-            <textarea id="eArchitecture" rows="4" class="field" placeholder="- 주요 테이블, API 흐름, 왜 이 기술을 선택했는지(트레이드오프)"></textarea>
+            <textarea id="eArchitecture" rows="4" class="field" placeholder="- 주요 테이블, API 흐름, 기술 선택 이유(트레이드오프)"></textarea>
           </div>
           <div>
             <label class="label" for="eNotes">5. 트러블슈팅 &amp; 핵심 설명 포인트</label>
-            <textarea id="eNotes" rows="4" class="field" placeholder="- 겪었던 문제 → 해결, 3분 설명 핵심 포인트"></textarea>
+            <textarea id="eNotes" rows="4" class="field" placeholder="- 문제 → 해결 기록, 3분 설명 포인트"></textarea>
           </div>
         </div>
       </div>
@@ -582,8 +679,34 @@
 
         <div class="form-row">
           <div>
-            <label class="label" for="fType">SaaS 유형</label>
-            <select id="fType" name="type" class="field"></select>
+            <label class="label" for="fCategory">1차 분류 (고객 대상)</label>
+            <select id="fCategory" name="category" class="field"></select>
+          </div>
+          <div>
+            <label class="label" for="fDomain">2차 분류 (분야)</label>
+            <select id="fDomain" name="domain" class="field"></select>
+          </div>
+        </div>
+
+        <div class="form-row-3">
+          <div>
+            <label class="label" for="fScope">시장 범위</label>
+            <select id="fScope" name="scope" class="field">
+              <option value="Micro-SaaS">Micro-SaaS</option>
+              <option value="Vertical">Vertical</option>
+              <option value="Horizontal">Horizontal</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="fDelivery">제공 방식</label>
+            <select id="fDelivery" name="delivery" class="field">
+              <option value="Web App">Web App</option>
+              <option value="API-first">API-first</option>
+              <option value="Widget">Widget</option>
+              <option value="Plugin / Extension">Plugin / Extension</option>
+              <option value="White-label">White-label</option>
+              <option value="Boilerplate / Starter">Boilerplate / Starter</option>
+            </select>
           </div>
           <div>
             <label class="label" for="fStatus">상태</label>
@@ -602,18 +725,21 @@
 
         <div class="form-row">
           <div>
-            <label class="label" for="fTarget">타깃 고객</label>
-            <input id="fTarget" name="target" class="field" placeholder="예) 1인 마케터" />
+            <label class="label" for="fPricing">과금 모델</label>
+            <select id="fPricing" name="pricing" class="field">
+              <option value="Freemium">Freemium</option>
+              <option value="Tiered (등급제)">Tiered (등급제)</option>
+              <option value="Per-seat (좌석 기반)">Per-seat (좌석 기반)</option>
+              <option value="Usage-based (사용량)">Usage-based (사용량)</option>
+              <option value="Hybrid (구독+사용량)">Hybrid (구독+사용량)</option>
+              <option value="One-time (일회성 라이선스)">One-time (일회성 라이선스)</option>
+              <option value="BYOAPI (무료/오픈)">BYOAPI (무료/오픈)</option>
+            </select>
           </div>
           <div>
-            <label class="label" for="fPricing">수익 모델</label>
-            <input id="fPricing" name="pricing" class="field" placeholder="예) 월 구독 / 크레딧" />
+            <label class="label" for="fTags">기술 스택 (쉼표 구분)</label>
+            <input id="fTags" name="tags" class="field" placeholder="Next.js, TypeScript, Supabase" />
           </div>
-        </div>
-
-        <div>
-          <label class="label" for="fTags">기술 스택 (쉼표 구분)</label>
-          <input id="fTags" name="tags" class="field" placeholder="Next.js, TypeScript, Supabase" />
         </div>
 
         <div class="form-row">
@@ -641,18 +767,97 @@
   <div class="toast hidden" id="toast"></div>
 
   <script>
-    const STORAGE_KEY = 'saas_archive_clean_v1';
-    const TYPES = ['Micro-SaaS', 'B2B', 'B2C', 'B2B2C', 'AI-native', 'API-first', 'Vertical'];
+    const STORAGE_KEY = 'saas_archive_clean_v2';
+
+    /* 1차 분류(고객 대상) & 2차 분류(분야) */
+    const CATEGORIES = [
+      {
+        id: 'B2B',
+        desc: '기업·팀 대상',
+        domains: ['업무 자동화 (AX)', 'CRM · 영업', '협업 · PM', 'CS · 고객지원', 'HRM · 인사', 'ERP · 재무/결제', '데이터 · 분석', '의료 · 헬스케어']
+      },
+      {
+        id: 'B2C',
+        desc: '일반 개인 소비자 대상',
+        domains: ['라이프스타일 · 습관', '콘텐츠 · 미디어', '교육 · 학습', 'AI 어시스턴트', '금융 · 자산관리']
+      },
+      {
+        id: 'B2B2C',
+        desc: '기업/크리에이터에게 툴을 제공하고, 그 고객이 최종 소비자에게 서비스',
+        domains: ['교육 · 에듀테크', '커머스 · 빌더', '예약 · 매장운영', '커뮤니티 · 멤버십']
+      },
+      {
+        id: 'Prosumer (B2P)',
+        desc: '개인으로 가입하지만 업무·수익 창출에 쓰는 1인 사업자·프리랜서 대상',
+        domains: ['마케팅 자동화', 'AI 에이전트', '디자인 · 콘텐츠', '생산성 · 워크스페이스', '프리랜서 · 정산']
+      },
+      {
+        id: 'B2D',
+        desc: '개발자·엔지니어링 팀 대상',
+        domains: ['개발 · 인프라', '보일러플레이트 · 스타터', 'AI · LLM 툴', 'API · 웹훅', '보안 · 모니터링']
+      },
+      {
+        id: 'B2G (GovTech)',
+        desc: '정부·지자체·학교 등 공공기관 대상',
+        domains: ['공공 · 복지', '교육기관 · 학교', '행정 · 문서관리', '민원 · 안전']
+      }
+    ];
 
     const DEFAULT_PROJECTS = [
       {
+        id: 'polyship',
+        title: 'Polyship',
+        category: 'B2D',
+        domain: '보일러플레이트 · 스타터',
+        scope: 'Horizontal',
+        delivery: 'Boilerplate / Starter',
+        pricing: 'One-time (일회성 라이선스)',
+        status: '배포완료',
+        desc: '글로벌 1인 개발자·인디해커용 다국어(8개국어) Next.js 15 SaaS 보일러플레이트. Firebase 인증, BYOAPI AI 엔진, Paddle/Lemon Squeezy 결제, 크롬 확장(Polyship Agent) 포함.',
+        tags: ['Next.js 15', 'TypeScript', 'Firebase', 'Paddle', 'i18n'],
+        live: 'https://jake12733.github.io/polyship-demo/',
+        repo: 'https://github.com/jake12733/polyship',
+        planUrl: 'https://github.com/jake12733/saas-archive/blob/main/plans/polyship.md',
+        prd: {
+          problem: '- 1인 개발자가 글로벌 SaaS를 만들 때마다 인증·결제·다국어(i18n)·AI 연동 보일러플레이트를 매번 새로 구축하느라 출시가 늦어짐.\n- 해외 결제(Paddle/Lemon Squeezy) 웹훅과 AI API 키 관리(BYOAPI)를 처음부터 안정적으로 붙이기 번거로움.',
+          features: '- 8개국어 다국어(i18n) 지원 및 Next.js 15 + TypeScript strict 모듈 구조\n- Firebase Auth + Firestore 기반 인증/데이터 레이어\n- Paddle 구독 결제 및 웹훅 처리, BYOAPI 멀티 모델 AI 엔진, Chrome 확장(Polyship Agent)',
+          business: '- 고객 대상: B2D (글로벌 1인 개발자 · 인디해커)\n- 형태: SaaS 제작용 보일러플레이트(스타터킷) — 이 코드베이스 위에서 다양한 SaaS를 빠르게 파생 배포',
+          architecture: '- Next.js 15 App Router + Tailwind CSS v4 + Firebase + Paddle Webhook\n- [선택] 서버 과금 대신 BYOAPI 구조 지원: 초기 AI API 비용 리스크 없이 사용자가 본인 키로 즉시 테스트·운영 가능',
+          notes: '- Polyship 자체는 B2D(개발자 대상) 스타터킷이며, 여기서 파생된 웹 앱(Polyship AI 등)은 Prosumer(B2P) SaaS로 확장됩니다.'
+        }
+      },
+      {
+        id: 'polyship-ai',
+        title: 'Polyship AI',
+        category: 'Prosumer (B2P)',
+        domain: '생산성 · 워크스페이스',
+        scope: 'Horizontal',
+        delivery: 'Web App',
+        pricing: 'BYOAPI (무료/오픈)',
+        status: '배포완료',
+        desc: '에디터와 Gemini·Claude·GPT 코파일럿을 분할 화면으로 결합한 멀티 모델 AI 작업 공간.',
+        tags: ['Next.js', 'TypeScript', 'Multi-LLM', 'BYOAPI'],
+        live: 'https://jake12733.github.io/polyship-ai/',
+        repo: 'https://github.com/jake12733/polyship-ai',
+        planUrl: 'https://github.com/jake12733/saas-archive/blob/main/plans/polyship-ai.md',
+        prd: {
+          problem: '- 문서·코드 작업 중 여러 AI 모델(Gemini, Claude, GPT)을 오가며 복사·붙여넣기하는 컨텍스트 스위칭 비용이 큼.',
+          features: '- 좌측 에디터 + 우측 AI 코파일럿 분할 화면(Split-screen) 워크스페이스\n- Gemini / Claude / GPT 멀티 모델 전환 및 BYOAPI 연동',
+          business: '- 고객 대상: Prosumer (1인 작업자 · 크리에이터 · 개발자)\n- 과금/운영: BYOAPI 기반으로 진입 장벽 제거 후 향후 팀 플랜/클라우드 동기화로 확장 가능',
+          architecture: '- 정적 빌드 기반 프론트엔드 + 멀티 LLM 프로바이더 어댑터 패턴\n- [선택] 분할 화면 단일 워크스페이스: 탭 전환 없이 작성·수정·생성을 한 흐름으로 연결',
+          notes: '- 향후 로그인·문서 클라우드 저장·사용량 과금을 붙이면 완전한 구독형 Prosumer SaaS로 전환 가능.'
+        }
+      },
+      {
         id: 'saas-01',
         title: 'AI 마케팅 콘텐츠 자동화 스튜디오',
-        type: 'Micro-SaaS',
+        category: 'Prosumer (B2P)',
+        domain: '마케팅 자동화',
+        scope: 'Micro-SaaS',
+        delivery: 'Web App',
+        pricing: 'Hybrid (구독+사용량)',
         status: '기획중',
         desc: '영상·글 링크나 상품 설명을 넣으면 브랜드 톤에 맞춰 뉴스레터·스레드·카드뉴스 문구를 생성하고 내보내는 툴.',
-        target: '1인 마케터 · 소규모 브랜드',
-        pricing: 'Freemium + 크레딧 구독',
         tags: ['Next.js', 'TypeScript', 'Supabase', 'OpenAI API'],
         live: '',
         repo: '',
@@ -668,11 +873,13 @@
       {
         id: 'saas-02',
         title: 'B2B 리드·CS 자동화(AX) 워크스페이스',
-        type: 'B2B',
+        category: 'B2B',
+        domain: '업무 자동화 (AX)',
+        scope: 'Vertical',
+        delivery: 'Web App',
+        pricing: 'Hybrid (구독+사용량)',
         status: '기획중',
         desc: '고객 문의를 웹훅으로 수집해 AI가 분류·요약·답변 초안을 만들고 슬랙으로 알림을 보내는 팀용 대시보드.',
-        target: '소규모 B2B 팀 · AX 에이전시',
-        pricing: '좌석(Seat) + 월 실행 건수',
         tags: ['Next.js', 'PostgreSQL', 'Prisma', 'Webhook'],
         live: '',
         repo: '',
@@ -688,11 +895,13 @@
       {
         id: 'saas-03',
         title: 'RAG AI 튜터 미니 구독형 클래스 플랫폼',
-        type: 'B2B2C',
+        category: 'B2B2C',
+        domain: '교육 · 에듀테크',
+        scope: 'Vertical',
+        delivery: 'Web App',
+        pricing: 'Tiered (등급제)',
         status: '기획중',
         desc: '강사가 강의 자료를 올리면 수강생이 구독 후 학습하고, 강의 근거 기반 AI 튜터에게 질문하는 교육 SaaS.',
-        target: '온라인 강사 · 수강생',
-        pricing: '수강생 월 구독',
         tags: ['Next.js', 'pgvector', 'RAG', 'Stripe/Toss'],
         live: '',
         repo: '',
@@ -709,9 +918,11 @@
 
     const $ = (id) => document.getElementById(id);
     const esc = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const getCatObj = (id) => CATEGORIES.find(c => c.id === id);
 
     let projects = [];
-    let selectedType = '전체';
+    let selectedCategory = '전체';
+    let selectedDomain = '전체';
     let activePrdId = null;
     let isEditingPrd = false;
     let toastTimer = null;
@@ -740,39 +951,52 @@
       toastTimer = setTimeout(() => el.classList.add('hidden'), 2000);
     }
 
-    function renderFilters() {
-      const list = ['전체', ...TYPES];
-      $('typeFilters').innerHTML = list.map(t => {
-        const count = t === '전체' ? projects.length : projects.filter(p => p.type === t).length;
-        const active = selectedType === t ? 'active' : '';
-        return `<button type="button" class="chip ${active}" data-type="${t}">${t}${count ? ` ${count}` : ''}</button>`;
+    function renderCategoryTabs() {
+      const allTab = `<button type="button" class="tab ${selectedCategory === '전체' ? 'active' : ''}" data-cat="전체">전체<span class="tab-num">${projects.length}</span></button>`;
+      const catTabs = CATEGORIES.map(c => {
+        const count = projects.filter(p => p.category === c.id).length;
+        return `<button type="button" class="tab ${selectedCategory === c.id ? 'active' : ''}" data-cat="${esc(c.id)}">${esc(c.id)}<span class="tab-num">${count}</span></button>`;
       }).join('');
+      $('categoryTabs').innerHTML = allTab + catTabs;
+
+      const catObj = getCatObj(selectedCategory);
+      $('categoryDesc').textContent = catObj
+        ? `${catObj.id} — ${catObj.desc}`
+        : '고객 대상별(1차) → 분야별(2차)로 정리한 SaaS 프로젝트와 기획서 목록입니다.';
     }
 
-    function renderGrid() {
-      const q = $('searchInput').value.trim().toLowerCase();
-      const filtered = projects.filter(p => {
-        if (selectedType !== '전체' && p.type !== selectedType) return false;
-        if (q) {
-          const hay = [p.title, p.type, p.status, p.desc, p.target, p.pricing, ...(p.tags || []), ...Object.values(p.prd || {})].join(' ').toLowerCase();
-          if (!hay.includes(q)) return false;
-        }
-        return true;
-      });
-
-      $('totalCount').textContent = `${projects.length}개`;
-
-      if (!filtered.length) {
-        $('grid').innerHTML = '';
-        $('empty').classList.remove('hidden');
-        return;
+    function renderDomainChips() {
+      const catObj = getCatObj(selectedCategory);
+      let domains;
+      if (catObj) {
+        const extra = [...new Set(projects.filter(p => p.category === catObj.id).map(p => p.domain).filter(Boolean))];
+        domains = [...new Set([...catObj.domains, ...extra])];
+      } else {
+        domains = [...new Set(projects.map(p => p.domain).filter(Boolean))];
       }
 
-      $('empty').classList.add('hidden');
-      $('grid').innerHTML = filtered.map(p => `
+      if (selectedDomain !== '전체' && !domains.includes(selectedDomain)) {
+        selectedDomain = '전체';
+      }
+
+      const baseList = selectedCategory === '전체' ? projects : projects.filter(p => p.category === selectedCategory);
+      $('domainChips').innerHTML = [
+        `<button type="button" class="chip ${selectedDomain === '전체' ? 'active' : ''}" data-domain="전체">전체 분야</button>`,
+        ...domains.map(d => {
+          const n = baseList.filter(p => p.domain === d).length;
+          return `<button type="button" class="chip ${selectedDomain === d ? 'active' : ''}" data-domain="${esc(d)}">${esc(d)}${n ? ` ${n}` : ''}</button>`;
+        })
+      ].join('');
+    }
+
+    function cardHtml(p) {
+      return `
         <article class="card">
           <div class="card-meta">
-            <span class="type-tag">${esc(p.type)}</span>
+            <div class="meta-badges">
+              <span class="badge-cat">${esc(p.category)}</span>
+              <span class="badge-domain">${esc(p.domain)}</span>
+            </div>
             <span class="status"><span class="dot dot-${esc(p.status)}"></span>${esc(p.status)}</span>
           </div>
           <h2 class="card-title">${esc(p.title)}</h2>
@@ -788,13 +1012,74 @@
             </div>
             <button type="button" class="card-edit-btn" data-edit="${esc(p.id)}">수정</button>
           </div>
-        </article>
-      `).join('');
+        </article>`;
+    }
+
+    function renderGroups() {
+      const q = $('searchInput').value.trim().toLowerCase();
+      const filtered = projects.filter(p => {
+        if (selectedCategory !== '전체' && p.category !== selectedCategory) return false;
+        if (selectedDomain !== '전체' && p.domain !== selectedDomain) return false;
+        if (q) {
+          const hay = [p.title, p.category, p.domain, p.scope, p.delivery, p.pricing, p.status, p.desc, ...(p.tags || []), ...Object.values(p.prd || {})].join(' ').toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      $('totalCount').textContent = `${projects.length}개`;
+
+      if (!filtered.length) {
+        $('groups').innerHTML = '';
+        $('empty').classList.remove('hidden');
+        return;
+      }
+
+      $('empty').classList.add('hidden');
+
+      if (selectedCategory === '전체') {
+        // 1차 분류(고객 대상)별로 깔끔히 묶어서 표시
+        const sections = CATEGORIES.map(cat => {
+          const items = filtered.filter(p => p.category === cat.id);
+          if (!items.length) return '';
+          return `
+            <section>
+              <div class="group-head">
+                <div class="group-title-wrap">
+                  <h2 class="group-title">${esc(cat.id)}</h2>
+                  <span class="group-sub">${esc(cat.desc)} · ${items.length}개</span>
+                </div>
+                <button type="button" class="group-add" data-quick-add="${esc(cat.id)}">+ 추가</button>
+              </div>
+              <div class="grid">${items.map(cardHtml).join('')}</div>
+            </section>`;
+        }).filter(Boolean);
+        $('groups').innerHTML = sections.join('');
+      } else {
+        // 선택된 1차 분류 안에서 2차 분야별로 묶어서 표시
+        const domainOrder = [...new Set(filtered.map(p => p.domain))];
+        const sections = domainOrder.map(dom => {
+          const items = filtered.filter(p => p.domain === dom);
+          return `
+            <section>
+              <div class="group-head">
+                <div class="group-title-wrap">
+                  <h2 class="group-title">${esc(dom)}</h2>
+                  <span class="group-sub">${items.length}개</span>
+                </div>
+                <button type="button" class="group-add" data-quick-add="${esc(selectedCategory)}" data-quick-domain="${esc(dom)}">+ 추가</button>
+              </div>
+              <div class="grid">${items.map(cardHtml).join('')}</div>
+            </section>`;
+        });
+        $('groups').innerHTML = sections.join('');
+      }
     }
 
     function render() {
-      renderFilters();
-      renderGrid();
+      renderCategoryTabs();
+      renderDomainChips();
+      renderGroups();
     }
 
     /* PRD Modal */
@@ -830,17 +1115,18 @@
       ];
       $('prdReadView').innerHTML = `
         <div class="prd-meta">
-          <span>유형 <b>${esc(p.type)}</b></span>
-          <span>상태 <b>${esc(p.status)}</b></span>
-          ${p.target ? `<span>타깃 <b>${esc(p.target)}</b></span>` : ''}
-          ${p.pricing ? `<span>수익모델 <b>${esc(p.pricing)}</b></span>` : ''}
+          <span>고객 대상<b>${esc(p.category)}</b></span>
+          <span>분야<b>${esc(p.domain)}</b></span>
+          <span>시장 범위<b>${esc(p.scope || '-')}</b></span>
+          <span>제공 방식<b>${esc(p.delivery || '-')}</b></span>
+          <span>과금 모델<b>${esc(p.pricing || '-')}</b></span>
+          <span>상태<b>${esc(p.status)}</b></span>
         </div>
         ${sections.map(([title, body]) => `
           <div class="prd-section">
             <h3>${title}</h3>
             ${formatText(body)}
-          </div>
-        `).join('')}
+          </div>`).join('')}
       `;
     }
 
@@ -886,10 +1172,12 @@
         '',
         `> ${p.desc || ''}`,
         '',
-        `- 유형: ${p.type}`,
+        `- 고객 대상: ${p.category}`,
+        `- 분야: ${p.domain}`,
+        `- 시장 범위: ${p.scope || '-'}`,
+        `- 제공 방식: ${p.delivery || '-'}`,
+        `- 과금 모델: ${p.pricing || '-'}`,
         `- 상태: ${p.status}`,
-        `- 타깃: ${p.target || '-'}`,
-        `- 수익 모델: ${p.pricing || '-'}`,
         `- 기술 스택: ${(p.tags || []).join(', ') || '-'}`,
         '',
         '## 1. 문제 정의 & 타깃',
@@ -912,26 +1200,41 @@
 
     /* Project Add / Edit Modal */
     const form = $('projectForm');
-    $('fType').innerHTML = TYPES.map(t => `<option value="${t}">${t}</option>`).join('');
+    $('fCategory').innerHTML = CATEGORIES.map(c => `<option value="${esc(c.id)}">${esc(c.id)}</option>`).join('');
 
-    function openEdit(id = null) {
+    function syncDomainSelect(catId, presetDomain = null) {
+      const cat = getCatObj(catId) || CATEGORIES[0];
+      const domains = [...cat.domains];
+      if (presetDomain && !domains.includes(presetDomain)) domains.unshift(presetDomain);
+      $('fDomain').innerHTML = domains.map(d => `<option value="${esc(d)}">${esc(d)}</option>`).join('');
+      if (presetDomain) $('fDomain').value = presetDomain;
+    }
+
+    $('fCategory').addEventListener('change', (e) => syncDomainSelect(e.target.value));
+
+    function openEdit(id = null, presetCat = null, presetDomain = null) {
       form.reset();
       const p = id ? projects.find(x => x.id === id) : null;
       $('editTitle').textContent = p ? 'SaaS 수정' : 'SaaS 추가';
       $('btnDelete').classList.toggle('hidden', !p);
       form.id.value = p ? p.id : '';
+
       if (p) {
         form.title.value = p.title || '';
-        form.type.value = TYPES.includes(p.type) ? p.type : TYPES[0];
+        form.category.value = getCatObj(p.category) ? p.category : CATEGORIES[0].id;
+        syncDomainSelect(form.category.value, p.domain);
+        form.scope.value = p.scope || 'Micro-SaaS';
+        form.delivery.value = p.delivery || 'Web App';
         form.status.value = p.status || '기획중';
         form.desc.value = p.desc || '';
-        form.target.value = p.target || '';
-        form.pricing.value = p.pricing || '';
+        form.pricing.value = p.pricing || 'Freemium';
         form.tags.value = (p.tags || []).join(', ');
         form.live.value = p.live || '';
         form.repo.value = p.repo || '';
       } else {
-        form.type.value = selectedType !== '전체' ? selectedType : TYPES[0];
+        const cat = presetCat || (selectedCategory !== '전체' ? selectedCategory : CATEGORIES[0].id);
+        form.category.value = cat;
+        syncDomainSelect(cat, presetDomain || (selectedDomain !== '전체' ? selectedDomain : null));
       }
       $('editModal').classList.remove('hidden');
       $('fTitle').focus();
@@ -942,21 +1245,33 @@
     }
 
     /* Events */
-    $('typeFilters').addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-type]');
+    $('categoryTabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-cat]');
       if (!btn) return;
-      selectedType = btn.dataset.type;
+      selectedCategory = btn.dataset.cat;
+      selectedDomain = '전체';
       render();
     });
 
-    $('searchInput').addEventListener('input', renderGrid);
-    $('btnAdd').addEventListener('click', () => openEdit(null));
+    $('domainChips').addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-domain]');
+      if (!btn) return;
+      selectedDomain = btn.dataset.domain;
+      renderDomainChips();
+      renderGroups();
+    });
 
-    $('grid').addEventListener('click', (e) => {
+    $('searchInput').addEventListener('input', renderGroups);
+    $('btnAdd').addEventListener('click', () => openEdit(null));
+    $('btnEmptyAdd').addEventListener('click', () => openEdit(null));
+
+    $('groups').addEventListener('click', (e) => {
       const prdBtn = e.target.closest('[data-open-prd]');
       if (prdBtn) { openPrd(prdBtn.dataset.openPrd); return; }
       const editBtn = e.target.closest('[data-edit]');
-      if (editBtn) { openEdit(editBtn.dataset.edit); }
+      if (editBtn) { openEdit(editBtn.dataset.edit); return; }
+      const qAdd = e.target.closest('[data-quick-add]');
+      if (qAdd) { openEdit(null, qAdd.dataset.quickAdd, qAdd.dataset.quickDomain || null); }
     });
 
     // PRD Modal Events
@@ -1011,17 +1326,17 @@
       const matches = [...text.matchAll(/^##\s+(.+)$/gm)];
       if (!matches.length) { $('eProblem').value = text.trim(); }
       else {
-        let extraNotes = [];
+        let extra = [];
         for (let i = 0; i < matches.length; i++) {
           const head = matches[i][0];
           const body = text.slice(matches[i].index + head.length, i + 1 < matches.length ? matches[i + 1].index : text.length).trim();
           const hit = map.find(([, re]) => re.test(head));
           if (hit && body) {
-            if (hit[0] === 'eNotes') extraNotes.push(body);
+            if (hit[0] === 'eNotes') extra.push(body);
             else $(hit[0]).value = body;
           }
         }
-        if (extraNotes.length) $('eNotes').value = extraNotes.join('\n\n');
+        if (extra.length) $('eNotes').value = extra.join('\n\n');
       }
       e.target.value = '';
       showToast('기획서를 불러왔습니다. 저장을 눌러 반영하세요.');
@@ -1045,18 +1360,18 @@
         if (idx !== -1) {
           projects[idx] = {
             ...projects[idx],
-            title: v.title.trim(), type: v.type, status: v.status,
-            desc: v.desc.trim(), target: v.target.trim(), pricing: v.pricing.trim(),
-            tags, live: v.live.trim(), repo: v.repo.trim()
+            title: v.title.trim(), category: v.category, domain: v.domain,
+            scope: v.scope, delivery: v.delivery, pricing: v.pricing, status: v.status,
+            desc: v.desc.trim(), tags, live: v.live.trim(), repo: v.repo.trim()
           };
         }
         showToast('수정했습니다.');
       } else {
         projects.unshift({
           id: 'saas-' + Date.now().toString(36),
-          title: v.title.trim(), type: v.type, status: v.status,
-          desc: v.desc.trim(), target: v.target.trim(), pricing: v.pricing.trim(),
-          tags, live: v.live.trim(), repo: v.repo.trim(), planUrl: '',
+          title: v.title.trim(), category: v.category, domain: v.domain,
+          scope: v.scope, delivery: v.delivery, pricing: v.pricing, status: v.status,
+          desc: v.desc.trim(), tags, live: v.live.trim(), repo: v.repo.trim(), planUrl: '',
           prd: { problem: '', features: '', business: '', architecture: '', notes: '' }
         });
         showToast('추가했습니다.');
