@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owen's SaaS Archive — SaaS Portfolio & PRD Dashboard</title>
+  <meta name="description" content="직접 기획하고 개발한 다양한 유형의 SaaS 프로젝트와 기획서(PRD), 아키텍처 의사결정을 모아둔 아카이브입니다." />
+  <meta property="og:title" content="Owen's SaaS Archive" />
+  <meta property="og:description" content="SaaS 프로젝트 · 기획서(PRD) · 아키텍처 트레이드오프 아카이브" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+
+  <link rel="preconnect" href="https://s0.wp.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Pretendard', 'serif']
+          },
+          colors: {
+            ink:   { 950: '#050505', 900: '#0a0a0b', 800: '#121214', 700: '#1b1b1f', 600: '#2a2a30' },
+            flame: { 300: '#f3dfa2', 400: '#e6c46a', 500: '#d4af37', 600: '#a8842a' },
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(212,175,55,.35), 0 20px 50px -20px rgba(212,175,55,.35)'
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { background: #050505; }
+    .grain::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .card { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease, border-color .3s, box-shadow .3s; }
+    .card.show { opacity: 1; transform: none; }
+    .card:hover .thumb-mark { transform: scale(1.08) rotate(-3deg); }
+    .thumb-mark { transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+    .chip[aria-pressed="true"] { background: #d4af37; color: #0a0a0b; border-color: #d4af37; }
+    .card-gold {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(180deg, #111113, #050505) padding-box,
+        linear-gradient(140deg, rgba(243,223,162,.85), rgba(212,175,55,.55) 40%, rgba(168,132,42,.55) 60%, rgba(243,223,162,.8)) border-box;
+      box-shadow: 0 0 0 1px rgba(212,175,55,.06), 0 18px 40px -24px rgba(0,0,0,.85);
+      transition: opacity .55s ease, transform .55s ease, box-shadow .35s, background .35s;
+    }
+    .card-gold:hover {
+      background:
+        linear-gradient(180deg, #141418, #060607) padding-box,
+        linear-gradient(140deg, #f3dfa2, #d4af37 45%, #a8842a 70%, #f3dfa2) border-box;
+      box-shadow: 0 0 0 1px rgba(212,175,55,.28), 0 24px 60px -20px rgba(212,175,55,.32);
+    }
+    .gold-text {
+      background: linear-gradient(100deg, #f7e7b4 0%, #d4af37 38%, #a8842a 62%, #f3dfa2 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .gold-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,.55), transparent); }
+    .btn-gold { background: linear-gradient(135deg, #f3dfa2, #d4af37 45%, #a8842a); color: #0a0a0b; }
+    .btn-gold:hover { filter: brightness(1.08); }
+    ::selection { background: #d4af37; color: #0a0a0b; }
+
+    /* Hero luxury grid */
+    .hero-grid {
+      background-image:
+        radial-gradient(60% 70% at 75% 20%, rgba(212,175,55,.18), transparent 62%),
+        radial-gradient(45% 55% at 15% 80%, rgba(168,132,42,.12), transparent 65%),
+        linear-gradient(rgba(212,175,55,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,.045) 1px, transparent 1px);
+      background-size: auto, auto, 48px 48px, 48px 48px;
+    }
+
+    /* Device Mockups (same signature style as Owen's Archive) */
+    .mk-laptop { position:absolute; left:7%; top:46px; width:68%; transition:transform .6s cubic-bezier(.2,.8,.2,1); filter:drop-shadow(0 18px 30px rgba(0,0,0,.55)); }
+    .mk-lid { border-radius:8px 8px 0 0; background:#1c1c20; padding:0 4px 4px; border:1px solid rgba(255,255,255,.08); }
+    .mk-bar { display:flex; align-items:center; gap:3px; height:13px; padding:0 2px; }
+    .mk-bar i { width:4px; height:4px; border-radius:9999px; background:rgba(255,255,255,.22); }
+    .mk-bar span { flex:1; margin:0 18% 0 8%; height:7px; border-radius:4px; background:rgba(255,255,255,.06); color:rgba(255,255,255,.4); font-size:5px; line-height:7px; text-align:center; overflow:hidden; white-space:nowrap; }
+    .mk-base { height:6px; margin:0 -7%; border-radius:0 0 10px 10px; background:linear-gradient(#2b2b31, #141417); }
+    .mk-phone { position:absolute; right:7%; top:58px; width:21%; border-radius:14px; padding:3px; background:#1c1c20; border:1px solid rgba(255,255,255,.1); transition:transform .6s cubic-bezier(.2,.8,.2,1); filter:drop-shadow(0 18px 26px rgba(0,0,0,.6)); }
+    .mk-notch { position:absolute; z-index:3; top:5px; left:50%; width:30%; height:5px; transform:translateX(-50%); border-radius:9999px; background:#000; }
+    .mk-phone-screen { aspect-ratio:390/844; border-radius:11px; }
+    .mk-screen { position:relative; overflow:hidden; background:#09090a; }
+    .mk-poster { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top; opacity:0; transition:opacity .35s; }
+    .mk-screen.shot .mk-poster { opacity:1; }
+    .mk-screen.shot .mk-skel { display:none; }
+    .mk-skel { position:absolute; inset:0; display:flex; flex-direction:column; gap:6%; padding:10% 8%; background:linear-gradient(160deg, rgba(212,175,55,.22), #09090a); }
+    .mk-skel i { display:block; height:8%; border-radius:4px; background:rgba(255,255,255,.08); animation:mk-shimmer 1.4s ease-in-out infinite; }
+    .mk-skel i:nth-child(1) { width:70%; height:12%; } .mk-skel i:nth-child(2) { width:50%; } .mk-skel i:nth-child(3) { width:30%; }
+    @keyframes mk-shimmer { 50% { opacity:.4; } }
+    .card:hover .mk-laptop { transform:translateY(-4px); }
+    .card:hover .mk-phone { transform:translateY(-8px) rotate(-2deg); }
+
+    /* Horizontal slot track (same as Owen's Archive) */
+    .slot-track { display:flex; gap:1.25rem; overflow-x:auto; overflow-y:visible; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+                  padding:6px 2px 10px; margin:-6px -2px -10px; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+    .slot-track::-webkit-scrollbar { display:none; }
+    .slot-track > * { flex:0 0 88%; scroll-snap-align:start; }
+    @media (min-width:640px)  { .slot-track > * { flex-basis:calc((100% - 1.25rem) / 2); } }
+    @media (min-width:1024px) { .slot-track > * { flex-basis:calc((100% - 2.5rem) / 3); } }
+    .slot-fade { position:absolute; top:0; right:0; bottom:0; width:56px; pointer-events:none; opacity:0; transition:opacity .4s;
+                 background:linear-gradient(90deg, transparent, rgba(5,5,5,.92)); border-radius:0 1rem 1rem 0; }
+    .slot-fade.on { opacity:1; }
+
+    /* Form & PRD Styling */
+    .field-label { display:block; margin-bottom:.375rem; font-size:.8125rem; font-weight:600; color:#d4d4d8; }
+    .field { width:100%; border-radius:.75rem; border:1px solid rgba(255,255,255,.1); background:rgba(5,5,5,.75); padding:.65rem .85rem; font-size:.875rem; color:#fff; transition:border-color .2s, box-shadow .2s; }
+    .field::placeholder { color:#71717a; }
+    .field:focus { outline:none; border-color:#e6c46a; box-shadow:0 0 0 3px rgba(212,175,55,.22); }
+    .icon-btn { display:grid; place-items:center; width:1.75rem; height:1.75rem; border-radius:9999px; background:rgba(5,5,5,.75); color:#fff; backdrop-filter:blur(6px); transition:background .2s, color .2s; }
+    .icon-btn:hover { background:#d4af37; color:#0a0a0b; }
+    .social { display:grid; place-items:center; width:2.5rem; height:2.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.1); color:#a1a1aa; transition:all .25s; }
+    .social:hover { color:#0a0a0b; background:#d4af37; border-color:#d4af37; transform:translateY(-2px); }
+    body.modal-open { overflow:hidden; }
+
+    /* PRD Reader typography */
+    .prd-doc h3 { font-size: .95rem; font-weight: 700; color: #f3dfa2; margin: 0 0 .5rem; letter-spacing: -.01em; }
+    .prd-doc p { margin: .35rem 0; color: #d4d4d8; font-size: .875rem; line-height: 1.7; }
+    .prd-doc ul { margin: .35rem 0; padding-left: 1.2rem; list-style: disc; color: #d4d4d8; font-size: .875rem; line-height: 1.7; }
+    .prd-doc li { margin: .25rem 0; }
+    .prd-doc code { background: rgba(212,175,55,.12); color: #f3dfa2; padding: .1rem .35rem; border-radius: .35rem; font-size: .8rem; }
+    .prd-tab[aria-selected="true"] { color: #f3dfa2; border-color: #d4af37; }
+    .scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(212,175,55,.28); border-radius: 9999px; }
+  </style>
+</head>
+<body class="grain font-sans text-zinc-200 antialiased min-h-screen">
+
+  <!-- 배경 글로우 -->
+  <div class="pointer-events-none fixed inset-0 -z-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 -left-32 h-[480px] w-[480px] rounded-full bg-flame-500/15 blur-[120px]"></div>
+    <div class="absolute top-1/3 -right-40 h-[420px] w-[420px] rounded-full bg-flame-600/10 blur-[120px]"></div>
+  </div>
+
+  <div class="relative z-10">
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-30 border-b border-flame-500/15 bg-ink-950/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+        <a href="#" class="flex items-center gap-2.5">
+          <img src="data:image/png;base64,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" alt="Owen Web 로고" width="40" height="40" class="h-10 w-10 shrink-0 rounded-full shadow-[0_0_18px_rgba(212,175,55,.25)]" />
+          <span class="font-serif text-xl font-semibold tracking-wide text-white">Owen<span class="text-flame-400">'</span>s <span class="gold-text">SaaS Archive</span></span>
+        </a>
+        <div class="flex items-center gap-2">
+          <a href="https://jake12733.github.io/acharive/" target="_blank" rel="noopener"
+             class="hidden items-center gap-1.5 rounded-full border border-white/10 px-3.5 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-white md:inline-flex">
+            <span>Owen's Archive</span>
+            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <button id="btnImportJson" type="button" title="JSON 백업 불러오기"
+            class="hidden rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-white sm:inline-flex">
+            불러오기
+          </button>
+          <button id="btnExportJson" type="button" title="전체 보관함 JSON 백업"
+            class="hidden rounded-full border border-white/10 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-white sm:inline-flex">
+            백업
+          </button>
+          <button id="openAdd" type="button" class="inline-flex items-center gap-1.5 rounded-full btn-gold px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-flame-300">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <span>SaaS 추가</span>
+          </button>
+          <input type="file" id="jsonFileInput" accept=".json" hidden />
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <div class="hero-grid relative overflow-hidden">
+      <section class="relative mx-auto max-w-6xl px-4 pb-14 pt-16 sm:px-6 sm:pb-20 sm:pt-24">
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-flame-400/40 bg-ink-950/70 px-3.5 py-1 text-xs font-semibold tracking-wider text-flame-300 backdrop-blur-md">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-flame-400"></span>
+          SAAS PORTFOLIO &amp; PRD ARCHIVE · 2026
+        </p>
+        <h1 class="font-serif text-5xl font-semibold leading-[1.02] tracking-tight text-white sm:text-7xl">
+          Owen's <span class="gold-text italic">SaaS Archive</span>
+        </h1>
+        <p class="mt-5 max-w-2xl text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
+          직접 기획하고 구현한 다양한 유형의 SaaS 프로젝트와 <span class="text-flame-300">기획서(PRD)</span>를 한곳에 모아둔 공간입니다.<br class="hidden sm:block" />
+          문제 정의, 아키텍처, 기술적 의사결정(ADR), 면접 설명 포인트까지 프로젝트마다 체계적으로 기록합니다.
+        </p>
+
+        <!-- 통계 -->
+        <dl id="stats" class="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4"></dl>
+      </section>
+    </div>
+    <div class="gold-line mx-auto max-w-6xl"></div>
+
+    <!-- ================= TOOLBAR ================= -->
+    <section class="mx-auto mt-8 max-w-6xl px-4 sm:px-6">
+      <div class="flex flex-col gap-4 rounded-2xl border border-white/5 bg-ink-900/70 p-3 sm:flex-row sm:items-center sm:justify-between">
+        <div id="statusFilters" class="flex gap-2 overflow-x-auto pb-1 sm:pb-0" role="group" aria-label="진행 상태 필터"></div>
+        <div class="flex items-center gap-2">
+          <button id="toggleEmptySlots" type="button" title="아직 비어 있는 SaaS 유형 슬롯 표시/숨김"
+            class="shrink-0 rounded-xl border border-white/10 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-flame-300">
+            빈 슬롯 보기
+          </button>
+          <button id="btnCopyCode" type="button" title="현재 프로젝트 목록을 PROJECTS 코드로 복사 (GitHub 반영용)"
+            class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 text-zinc-400 transition hover:border-flame-400 hover:text-white" aria-label="PROJECTS 코드 복사">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+          </button>
+          <label class="relative flex-1 sm:w-64">
+            <span class="sr-only">프로젝트 및 기획서 검색</span>
+            <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="프로젝트, SaaS 유형, 기획서 검색"
+              class="w-full rounded-xl border border-white/10 bg-ink-950/70 py-2.5 pl-9 pr-3 text-sm text-white placeholder:text-zinc-500 focus:border-flame-400 focus:outline-none focus:ring-2 focus:ring-flame-500/30" />
+          </label>
+        </div>
+      </div>
+
+      <!-- SaaS 유형 슬롯 칩 -->
+      <div id="slotFilters" class="mt-3 flex gap-2 overflow-x-auto pb-1" role="group" aria-label="SaaS 유형 슬롯"></div>
+    </section>
+
+    <!-- ================= MAIN GRID ================= -->
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div id="grid" class="space-y-14"></div>
+      <p id="empty" class="hidden py-20 text-center text-zinc-500">조건에 맞는 SaaS 프로젝트가 없어요.</p>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-12 border-t border-white/5 bg-ink-950/85">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6">
+        <div class="text-center sm:text-left">
+          <p class="flex items-center justify-center gap-2.5 font-serif text-lg font-semibold tracking-wide text-white sm:justify-start">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAa/0lEQVR42sV7aYwd2XXed869VW/vvZtNdnMZ9pDDZchZOBxJI0OSLVmJBCGRBEkIjEiIlEh2LMkIECPOnyxAFiub5FiBIY+C2JGMGBgkkTKRMJITeZlxPKMZDTkcksOtuTTXZpPs9W1Vde85+VH11u7mLHCQBh7x+F69qnvPPec73/nOvTQ29QAAAgFgAgCAiAAoiABqf9u5oPU5iLKPNfsZGUCdc4TYKayBLRd438gAHxwu02PFHD+eC2g4MNhLTAMCUqiC00euJh7no0SWak09tlyV40tr/vRqXc86DxdYQmgBUlhReCUoAUgf/c7/qGUAhmYTb88rnaimoyMAms28zwBkWFkVPooVIJixQfvk9Lj5+OgAf4SI9q7VfW6tJqg1gUascE7hBRDtPMcyIQwIuQAoFggDRUKlwJEXPb+8Js/dWvTfv7ckL3uFD3MEJhhRCABlBdIl6DOIAq2165l09lXbAJR92DFAlwdo7+dK2jYIM1koXDNRhAG27N4afG77RPBZJ3LozqLHwrJHraFwHgKQsgExAUwdG6IzYFVAvQCqUAXIMLiUJ4wNMSZHDAJDJ2/cdd+9eMt9pxHp7UKOQASrCtc9ubfjFZkBCPQmHtBtACZiJmgzIbVGJ/bvDH5125j5leUqtszNJ1haEyUibw2YiEgEJKrZwLR70uuWhDIPYyIwQ1WhTkhE1QyUmHZssRgf4tsLi+5bp6/EvxM5LBRyTCpKCkj7lrp+8TdyiHUG6Lj2RhiAzOLkolgxM2W/sG+n/Wd3lmXb+WsOzUhdLsdMIPY+dXO07wEYKN5OyGp2MTNgDQEgaTpILoDdMxVgcoRvnr+R/KML15P/lAsIhvu8oe9h2nI73RADule+teLaYwC2sM1IXT6kve8+mPttUf0rr19IUI/gCjk2CqXEK6CcraRmlidAkeLMOwSrlvNYQ2AmbSbq8yHZg7sD5AP68Stnm79Wber5Uo6tFziFgt+CtU1xYDib4n1DgJjB1Yb67RPmMz93uPDfL95wh05dcs5aJmPIxE5JsgkSUXvyLR+nLvd7J0agbDwqgBehwICJSa/Oi/eCve86kP+lONErt5f8yTDozJ02cH3ayAAA9UwcLYMQiImo1hR5fG/4jT3Twb97/kSzuFIjXwjZxomSKPp+27kXstVvGUCpExZtN90Eqdd9ll1LRBAFvFcqhMRrDfgr8670yO7w08MDZmjutvtRaInR9TxssgCZAbht4Zbrt6ZBDK41Vd5zMP90uchf/pPjTR8GhgDl2AmIqde6bQNkIK/Ufii34rAboOhtukGfRzivYFK2hvTCdSfbx81Tu7bYqUu33LOBJdNz/f1CoJcHpLNgJqo1RH7xaPFpBb74569HyUDZ2NgJiSDNaf3uRRladiF66wq+z0DeMZFJHQxelIp55ku3fDI+xEcP7gqmLlxzz9qAuDXIjbKCKQ6MbIABSkwwtYb69x7KP63AF186Fbmhig2akaRZI1sC6hsNrYs2WreCf5kG6P5zTlEqGHN1wbuhCh99YNJOXb6ZPBsGZFvRICBINi4FwRQHhtpDaoWAYbLVhrgje/PfqJTsl58/0UyGyjZoRr6FC+syRitt3m+KRP9vjUDUNgJfmffJ5Kg5Ojlsh+bm3XP5gK2mcLVxCCCziWEyzQR+x4T91IPbw6//ybFGMlgythl5SuO9k9ipxwD0FgzQV0vcBwQ3y4VEb26EpGWEW97tmbbvBeH0woqcCiyMtiG5TW16nJW9wOcDnXn8ofzTL5xoSClvbBR5Ito4evUtr44CXURI3wQEaZMPpeXLm1yrmRHqkVC5wPaVs7Ec2BU+XSnQTOLJg8BE2gZ67vkhg5qx8Lv253/39OV42HlW74Wkf7q68RBV34zZEaAEVYJmt9H7EZ+3YBkF4EHtVyvGiYDYC4FIT15Ohp/cn//dxAv3wxZ3EJtMPYLfvS34rBN88Mot50JLJnHaRtr+UaUMT99s3XrSIdoTT0FI6e3mwdSI0jPhvlFROmYnADPM7UVxtYZ88KFp+9lGBA8ik45H2x5AqlBjaPTh3fmvvX4xlmKeuRmneb5FpXqcWDdbP3pb9FYU61Zvs5fPrpe+J69Pw534jhNBIUd86nIsu7aGX8uHGBWBAkKAglUVROBGpPLwruCrtxf9ZL0JEdFOeLRdYP1kdZ3rv3N81zd54R0UUgAhccKJh8wvyuTDD4RfbUYinJY/KTdRheRDTEyPB185MxdrIUcm9tqhW32TUuofWXdRr/j/+adK62DReUVoyczeSHSkYr5SytOEF0hK9phsFKvObAs+t7gqo80YXlT7saJFwjsoTr3JXfXtr9LbyyOb/z6tWrVv9RWtYCFSeFFyDn5hyY8+OBV8LkqgRGQ5A9Fw+4T9/OVbTnMhc5J0GJ2uA7leZtfiAkwEw5RiBr217EB/KZSolVW4XcStR4m0ZggD8NUFpxPD5vPWUKhKnmNHMjbIj6riwFJNFaSstMGg+6q7llChAOqRx3I1weJqjNVqgiiWtCRmWgdMqp1798S49j5TNzDchte1PU+gKqmEpBstmEJUea0u2kxwYMuweTRORGwcK3ZuCT+5sKwgQBKXloYpyHfYnWof/SXFSjVBIWewf2cJM9Ml5PMGy6sJzl6p4vpCA8SEcsFCughoYFOv8tLRGwCADWXVXXadSa8T6fM/k6KXk879RLRtGGbAMMF57fI+anuBYZL5Rc/bxuwnry0kL1tjNByp8MdOXExgDXGUaLqyrWJHW+wqTYCGCKnqo/j0L2zF3/jwFEYGQhw7t4zlNYeZJ0t4aGcJPzuzjD947gZePbeCSjEAAWjEHn/7r+3Eux4egqi01SbnU+teuFbHv//DS6g1Pf7Wx7bjF58cRewEJvM0FcAQ49Vzq/gPz1xGPsf49b/5IHZvK8B7gTUMMOHslSr+7Xdn10WXCJALiO8tO+wYz30ssPSPaWrXgwfetT937P+cinOGCc1EYbhLEmslA1YwAYkHSnnGP/k7D+KjT43j1KUafv2338CFqzWACIaAv/6+Lfinv7wXzgm+9b1r+M4Pb6BUsFBVlAoGlSLja1/eh11b87CG8OLJFfzmf56F94SVmoMqUCkaBBb47Eem8OkPTUIV+NZ/vYofvXQHiQdWa6n0N1yxKISM3/zyPpydq+I//o+rcJ6wuJqsqxtUgcCkBn/3wTA6dSl+3I4MmMfWmppzXiUTY9t8GkhV4BatEFUwKf7F392L9z02hLn5Bv7BN8/g4o0mRodz0Mwtn/njeQwPBvi1z+zAVz+9A94pvvujGxgoBag1PK7ON/DCa0vYMTmJlZrH8ECAeysOzisCm4LZWt1jre4wWAlRb3pYQygWLM5fq2N0MGxjy/xijFKOUchbfO/PbuPc1QaGK0Ef7nRCUFQhClmpa25kkB/jkQF+uFoXgEj9BoDVFjOYsFbz+NxHt+GpwwOoNx1+/NM7OHe1juFKkDU7FKLA6GAO//OFO5i71US9meCLH5/C4QcrqDU9rCUU8gbHz61AROGcx/REiH07i3Be2yKKF8XOyTwe31eG8x6J83jy4AAmhsOe6tJ7xRMHBuFVMXuthpGBIA1h1farG0VT7CGt1gRDZfMwVwrmyFoDYKbeYlm78jwzokSwbSKHT3xgAqu1BE6APzu2jNCaVP7uSpvGEO6terxyZgWBJQQW+MyHJuF9CmphwDg3V8PCYgRmIAwIB3eXkfhMmidCI/Y4vKeCldUEiysJvFdMjeewc2sezVjaCxU7wZH9gzh/ZQ33VhIwoQd0kYGjSoph4lN1v9pUlPJ8hPMhjTQibbUCWhQZvRUToREJ3ntoEONDaSzfXYpx5VYTQUBdqacrZUBw+lINRIR60+GxvWVMj+fQjASBYSwsJzh9uYp8wEic4OGZCiy33FXhveKpQ0P43p/exulLNYSWkA8Jj+4ZQJykBhBR5EPGgV0l/MXrSz3yeTrpLlJEvay12RQY0hG2BnsSl7XVtG/yGSCopmj9yJ4yRFJUXliMsFJ1MEydvK5os0LDhJt3I8Sxh/OCobLFg9NFxImAGfAeeOWNVRApoijBzHQBIwMBEpf2DkfKFjsni3jhxBJOXlwDkyJOPB7dU0Fg03lEiWB6PI/BosGrZ5aRDwzEZ26vfdxdO2FBUErDjfYwiAe8dGnC1PujFnDkQsLWsRCJExgCltccYqcA9bc7Mq2NCas1h0bk064QKbaNhfCZt4Qh48SFNaxWPUSA8SGLmakiYieIEsG+XSVEsceV+QinLlZRawoSJ9izvYAtwyESr4hiwSMPVnB3JcHV2xHCgDqemBGDDhZ0hQRAadhigEWhsplMrZ1WXmAJhRzDe4FC0Yw9RDu1vWR9nxboEBPiROCcB1QhEBQLBtDUoKElXFuIcfFmHdYAlhWHZkoQr4gTwdEDA3jj8ioSp5ibb2LuVh1EipEBiwMPlBHFKes7sr+C1y6soplomsIyHOqvINuGyFxVVCFZZ3mD0oTaxY52aQEpuHRxUepNM5rV7R2pICuSMpdML0tZDRPQaHq8dqGKwKbGenimBGsJYcDYt7OAl04tIx8yVusex89XEViGQnBkXwXOCQZKBru25vHT08sILUEyKtyZywaZoEuMESUwQWkdYehDQQIhcYpq3YFSDR65kMFdNUPnIdnNRRFYwBikAxPFatW1G1UKgjGE42erSFwa37u3FjBYttg2FqKQMzh5qYZ8mDZtXnljFc4J4tjj0O4yciFj19YCVBVnLtWQDxgirXphPQ6kC5GpUNkHDCGG0qo1tFHTuu0FDCCKFFfnmzAGcE4wVGbkAtNr8a73iTAGyxa5gCACJE5wbaEJzkBTvCIXGJy/VsfNuzEIwPAAY/tEDgd3l3FjIcLdpRhMQC5gnJmr4dbdCKqKqYkA28ZCHNhVwpVbDSyuupQud1VK3YWTagvSNCuYoBnZXWUneiEtUKirg0frVBqAcPx8DSIpGI0NWgyWLJzvbYZoRiO9KKbGQ1hWMCvuLMeYvdZAGKSMUgEYQ1hcdXjjUg2BTf3i0O4iDs+UcezcarofQQFrGPdWPE5fqsOadKvMY3vLeGhHEcfOrnWUqZZ7t8RXyl49ei5BoWoNIIIL3Ix1MRcwVFv9vD4jZPm2UDB46Y0qri3EIBIMlxm7t+XSnMzdTa80AROAg7sKSJygEDL+4uQa5pcSBJbR4SkKEcWx81UQEWpNh59/fBC7JgP87Mwa8jnbvlYV+NnZtVTybjr81XcPY2osxM/OrKKQNxkgZ4ag7NUFfJ2FTMlYEDISj0WuNfXVSgEQdARaajf1GK2ufmAId1c9nvnJIoo5A1XBzz9egRNF2n1LDcBEiD1jYiTAo3sL8CJYqXo888f3EFgDr6kWq5qGRhAYnLxUx0rVIUk8dk+FWFpLcO1OjDDgNFxUEQaE12erWFyNETuP/bvyWKkluL4QpSWxrkf8dRkg+8wrtJgD6g3/Ki+t4VSlyFABGe53+w4h8qKoFA3+2/NL+OGLKyjkGO97tIwn9hZxZykGc1oveDCWqw6fen+6QkSEbzxzC5fnY4QhZ7V7urvJKyGwjOsLMWavpe7tPfDKmWpGr7NrRRFaxo07Mc7ONRBahvfAq+dWkQi6NIvuiXd4QDfyEzO8Kg2WGEtVf4rvrcjxSpEjY4g5i7l2eqOue1Hq5oE1+Nf/5Tb+8H8volIg/Mtfnsb7H6mgEXnUmg5Mgq9+Ygxf+Ogo7iw5/PPfv4k/emUFlaLp5eiZGmsIaEaK12brGK4Q4sTjxGwdgaHO9ZkYEyeCY+eqGCwxnJM0NRpKMaWLjraIj2T8RDL1X1VhWEEAD5VNdHdFjtuVms4SaLacp4PNmATwTNoqgwmdf9MbpmjL+Pozd/Dnr1fxyfcN4zd+aRI37sRYawi2jgYo5Rm//9w9fP+FZVxbSFApBZBM9NAuC7e3vVjCS6ereM/DJVy8EeHqQgwbpAbTrH/oRREEjJ+eruLlN2q4eTfG3O0EgSWIz+oR6oRif+ZXTT0OSpIPlA3r7L1VP0v50f14z8Hc1+pN+Y1LN5wDwUqflJK2/LWn4UAE1BoeqorxIYPpsRD5kLBU9bieGSMfMnIBr1v5jZRdkVS+JqQGyQqQdZuEvKQvyvYLtRV62kgiX/9cQ3DbxthODPG/ev716B/SwOQBjA3ykwd3BT998VQkQcAcJbpOTaG2gKftri5z+vjECRKXWtkYQmgJ1qDDAt+mRJ7+RDadCLVcfRNRfaNniipCQ0icyJP7czx3273r6oJ7mUNLvLAsr1lDbwyUDRGRbD4+ArKGkRKy2CNYwyjmGKUCIx9SJmhkvUPq2ieX1frd1LOTorR3M1+7yKI+CosWj8dGNH4zKqyqYIYU80Slgnnjxl33WmiJWUFGhOKbd+X3HthqKUpUWuXmfQ3R8wBAsrTWrhcANJoxnBeIaPYSJM6hGcVwzmfyVCpni081AK+CJHGI4gTiBVGUZBS3H5mxbqJtFthHhVUBy0AUi2yfCOj2kv+9OEFMRMYUKhNqDdFSVWYffiD4wvU7UjJMSHxvjUBEXfvNushSz9sOGVJV7N29DbHzAAjWGBhjUCoWMDYyADYM7zzCIAATIQwsmAjWGgwOlDEyWE7xZWQQUeLSuO9z+n65q7+GaX0vqsgFRgXgw7vDxVfPRV8iojoAMYWBCRgmU49QHSxxcXSQP3DzrvjAEovS+g4O9YdE96bCVN9vNhM89cQBTG8dx76ZaWwZH8ZjB2cwPFDG4QO7MT46gEqpgPccOYBcGKIZxTj6yB48cnA3hgcreOrIfgTWolIq4GMfehLOeVy8chO5sNVjoJ79teuqve5Mk1Fp78nvmbIGin9z9lryw1wIowrhbM+dFHLEJy8l35weM/O5AGyZpNMMoY21AnR5RNsYab9+cnwYr74+i0YzxvTWUQxUCpjaOopqrY5mFGNpuYpyMY9DD+3Ajfl7mJocw9BAGdsmR7BWbWCt2gAYWKs1MFgpteuCHkzINlt00mrr/9z+TpUQGBaQ8K6t4fyxC9E3CyGxpM1RmOLAltZRAI5i1BR6d9c2+4krt5wv5JiTTKndqFe6vq3XwYbVtTo+8J7DOHV2DncW13BzYRGLy2uYX1jC8GAZq9UIb5yfgxePS3O3USiEuHTlFpZXari7uIpKpYCllSqMMbh89TbuLa6CmTuduR6w6zdMJ5vkQkI9Ev/oTGjurvivzN32L+ZCZs3YM41OH+rkdyZTb4p+6Ejuj2avJx+8u0IepMZLO7LfUjc3ZW2uC4QEYAGUwNkmSkUqXnjvkc+FiKI4+zxrbxFDRNocIQhtp6rrR/ru1Kg9zWwYJl8pwhzZk//JD16sfjiXY1KFb92nxwBEYC+QnNWZDx8tvPLjl6PBwBI1k27o1Y32ymzc5NXOBn5Ky61erp5hu6iiV5Xpiu1Wgakdfa7HA7o9omvyoopijrXZ8PrRp8orf3q8fnSlLhetAat0SAb3tY7EMkytSRdPzCZf+rnDAa/WxeVD0t6OK3d+qhsTkVSHz9JkdjpERHrysmbaXH/Fptrd8Oy6FzaYvGTO3DUO7wXFkHVl1bunDhX5zJXoS3dW/MXAkGlNvsUZTLEy2UlnWQEVWrK3FuXU2CAPbd9i3jt73btKkU3iOueKOn6mvZtztB8gN+l1dz2wm3Zq30pq37Zvlb779jDltDNVylusVL078lA+IMZv/fRM/RvlgrHeq+8kEEUPCHaSOUEJGubYXrrhnpvZaqYmRszRy7e8KxeZY9e/WTE1gvZvy6Z1Dfx2sujhDW3doW/vIG2Q57t5iPbt2stCqZQ3WK2JOzSTC8aG7bd/8mr1K6W8taLq+3dsKPUYoMu7U4fQMCC+cN09e3jGTg1V6Oilmy6pFNkk/n6bnnWD/bHdqbRXbm7LaXr/7TI9GbCb5bX/qygWLFaqPjn8YC54YGvw7R+8uPalfM6wphJVO4a616ptAOWuMq/LkwNL5swV9+yeKTM1NREcnb3hfDnPJAC1+glvukusdc/+zcLUtQexz3U2E1u1W5KnNPyZgWLe6sqalyf25e34oP32D15c+1IYGMOsPQCipJ3JCWAKg1vSwO7e+dW34TuwxLPX/LPTo2bowK7gqUvzjgjkcwGx8/fZ1LjpxqkMOzKZun87ezfhuZ8hRIF8SDBEvhl5fv+jBTaM3/pfr1S/kg+43SRuYX7vsarMAwqDkz3HWjZcRAJylvjidfcjw3rmvYfCX1iuSmlxVVwxx4Ss1URd7qA9K6ob7mxsqbcg7cI5bR9u0q6w0O4WtyqsAfI5o/Wm+pEy7AceLdy7fCv5/Eunm18v5ZnRSkKtLkwr30lXCHCPAd7kUI9C8yHZ+SU9efOu//4Te4O9Y0O899Y9T4mDy+eobYiN7kGbv+l6q+sSSLvZIikKWssIA1bnyatX8/jekGemcj9+4UT9U3O33fPlAlsFfAc3Ot7W1/IGtN8A6DrYQ/1kBhBAwpBslNCdc3PuDypFXDt6IDgaBhhcWPbkPbl8yDCc4oNq3zmBjeg0FMgkiP7JZ7v8QEjF0yBgSZx6UTUPTht+4qHw5p1l//eeP1H/+7Gne4WQrCjc+lCmnjZfS+pnZtDI9kc2CWFNx5WegoNyV8oHmBVaj1SLOZ04PGN/dXyIf+XGXdkyd8uj2lQ1TN4wWAESERLVHoWok9K6g7RzWIsJMAZKIHWJihc1hbzSji0GOybM7aU1+dbxc9HvrNZloZhPTZzpJBsqQp3SOD3xUioVsbK6tpEB+o4UaG/+pi4phhlWVF29qSjnacue7eZz20bps80Eh27e9VhYFNSjdE8OM9S09jJS6xSyZiCo0OwvM5SKgJiI8wEwNkTYNs4ohHRyftF/98K1+Dsr1fToLLNYkc5hyZZUtqlEpooHHtiJHTum8eqxE6CR7Yd7fbN9xPWtbtRU4uygRSNWBEbN1jHz5PZx/vhACR/xgr2rNcmt1ATVBtCIFLHXdsMDWR1goDAGyIVApcAYLBMGiogCS+erDTw3Nx9//8Yd93KcwOdDgjEwIhDVXh68WdZIt8kJyuUSjh55DEODA5i9eAU0On24Iydr5va0+Zk93fCLbEsAYATq4iQ9tpILYIcr2Dc2xAeHS3ismOfHA4thEPYqMNDKz8YQAVj1IuejBEuNSI4tr/njd5b96Xtr/mwUq7OcniwnpMfnO+xX1lWH6K4M+1StOI4xPDSEnTum8dqJU/i/p/1+/qvhw7gAAAAASUVORK5CYII=" alt="" width="28" height="28" class="h-7 w-7 rounded-full" />
+            Owen <span class="gold-text">SaaS Archive</span>
+          </p>
+          <p class="mt-1 text-xs text-zinc-500">© <span id="year"></span> Owen Web · Full-Stack SaaS Portfolio &amp; PRD Vault.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://github.com/jake12733/saas-archive" target="_blank" rel="noopener" class="rounded-full border border-white/10 px-4 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-flame-300">
+            GitHub 저장소 ↗
+          </a>
+          <a href="https://jake12733.github.io/acharive/" target="_blank" rel="noopener" class="rounded-full border border-white/10 px-4 py-2 text-xs font-semibold text-zinc-300 transition hover:border-flame-400 hover:text-flame-300">
+            Owen's Archive ↗
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= PRD VIEWER / EDITOR MODAL ================= -->
+  <div id="prdModal" class="fixed inset-0 z-50 hidden items-end justify-center bg-black/80 p-0 backdrop-blur-sm sm:items-center sm:p-4" role="dialog" aria-modal="true" aria-labelledby="prdModalTitle">
+    <div class="flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-t-3xl border border-flame-500/25 bg-ink-900 shadow-2xl sm:rounded-3xl">
+      <!-- Top bar -->
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-2">
+            <span id="prdSlotBadge" class="rounded-full border border-flame-500/40 bg-flame-500/15 px-2.5 py-0.5 text-[11px] font-bold text-flame-300">Micro-SaaS</span>
+            <span id="prdStatusBadge" class="rounded-full bg-white/10 px-2.5 py-0.5 text-[11px] font-semibold text-zinc-200">기획중</span>
+            <span id="prdReadinessBadge" class="text-xs font-semibold text-emerald-400">설명 준비도 0%</span>
+          </div>
+          <h3 id="prdModalTitle" class="mt-1 truncate text-lg font-bold text-white">프로젝트 기획서</h3>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button type="button" id="btnImportMd" class="rounded-lg border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-zinc-300 hover:border-flame-400 hover:text-white">.md 불러오기</button>
+          <button type="button" id="btnCopyMd" class="rounded-lg border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-zinc-300 hover:border-flame-400 hover:text-white">마크다운 복사</button>
+          <button type="button" id="btnDownloadMd" class="rounded-lg btn-gold px-3 py-1.5 text-xs font-bold">.md 저장</button>
+          <button type="button" id="btnOpenEditFromPrd" class="rounded-lg border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-zinc-300 hover:border-flame-400 hover:text-white">기본정보 수정</button>
+          <button type="button" data-prd-close class="grid h-8 w-8 place-items-center rounded-full text-zinc-400 hover:bg-white/5 hover:text-white" aria-label="닫기">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+          <input type="file" id="mdFileInput" accept=".md,.markdown,.txt" hidden />
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex items-center justify-between border-b border-white/5 bg-ink-950/60 px-5">
+        <div class="flex gap-1 overflow-x-auto" role="tablist">
+          <button type="button" class="prd-tab border-b-2 border-transparent px-3.5 py-3 text-sm font-semibold text-zinc-400 transition hover:text-white" data-prd-tab="read" aria-selected="true">기획서 보기</button>
+          <button type="button" class="prd-tab border-b-2 border-transparent px-3.5 py-3 text-sm font-semibold text-zinc-400 transition hover:text-white" data-prd-tab="edit" aria-selected="false">기획서 작성 · 수정</button>
+          <button type="button" class="prd-tab border-b-2 border-transparent px-3.5 py-3 text-sm font-semibold text-zinc-400 transition hover:text-white" data-prd-tab="check" aria-selected="false">설명력 점검</button>
+        </div>
+        <a id="prdGithubPlanLink" href="#" target="_blank" rel="noopener" class="hidden text-xs font-semibold text-flame-300 hover:underline sm:inline">GitHub 원본 .md ↗</a>
+      </div>
+
+      <!-- Body -->
+      <div class="scrollbar-thin min-h-0 flex-1 overflow-y-auto p-5 sm:p-6">
+        <!-- Read Pane -->
+        <div id="prdPaneRead" class="space-y-5">
+          <div id="prdMetaSummary" class="grid gap-3 rounded-2xl border border-flame-500/20 bg-ink-950/70 p-4 sm:grid-cols-2"></div>
+          <div id="prdReadSections" class="prd-doc space-y-4"></div>
+        </div>
+
+        <!-- Edit Pane -->
+        <div id="prdPaneEdit" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <p class="text-xs text-zinc-400">각 항목을 채우고 하단의 <strong class="text-flame-300">기획서 저장</strong> 버튼을 누르세요.</p>
+            <button type="button" id="btnFillTemplate" class="rounded-lg border border-flame-500/40 bg-flame-500/10 px-3 py-1.5 text-xs font-semibold text-flame-300 hover:bg-flame-500 hover:text-ink-950">빈 항목 템플릿 채우기</button>
+          </div>
+
+          <div class="space-y-4">
+            <label class="block">
+              <span class="field-label">1. 문제 정의 &amp; 타깃 고객 (Why)</span>
+              <textarea id="eProblem" rows="3" class="field" placeholder="- 누구의 어떤 반복 문제를 해결하는가?&#10;- 기존 대안의 한계는 무엇인가?"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">2. 핵심 기능 &amp; 사용자 흐름 (What / MVP Scope)</span>
+              <textarea id="eFeatures" rows="4" class="field" placeholder="- MVP 핵심 기능 1~3가지&#10;- 사용자 흐름: 로그인 → 핵심 액션 → 결과"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">3. SaaS 비즈니스 구조 (과금 · 권한 · 멀티테넌시)</span>
+              <textarea id="eBusiness" rows="3" class="field" placeholder="- 무료/유료 플랜 차이, 크레딧/사용량 측정, 팀 데이터 격리 방식"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">4. 시스템 아키텍처 &amp; DB / API 설계</span>
+              <textarea id="eArchitecture" rows="4" class="field" placeholder="- 주요 테이블(ERD), API 엔드포인트, AI/외부 연동 파이프라인"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">5. 기술적 의사결정 &amp; 트레이드오프 (ADR)</span>
+              <textarea id="eDecisions" rows="3" class="field" placeholder="- [선택] A 대신 B를 고른 이유와 트레이드오프"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">6. 트러블슈팅 로그</span>
+              <textarea id="eTroubleshooting" rows="3" class="field" placeholder="- [문제] → [원인] → [해결] → [배운 점]"></textarea>
+            </label>
+            <label class="block">
+              <span class="field-label">7. 3분 발표 대본 &amp; 예상 꼬리질문 Q&amp;A</span>
+              <textarea id="ePitch" rows="4" class="field" placeholder="- 면접관에게 3분 안에 설명할 핵심 대본과 예상 질문 답변"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <!-- Checklist Pane -->
+        <div id="prdPaneCheck" class="hidden space-y-5">
+          <div class="flex items-center justify-between gap-4 rounded-2xl border border-flame-500/20 bg-ink-950/70 p-4">
+            <div>
+              <h4 class="text-sm font-bold text-white">내가 만든 것을 말로 설명할 수 있는가?</h4>
+              <p class="mt-0.5 text-xs text-zinc-400">체크한 항목에 따라 프로젝트별 면접 설명 준비도가 자동 반영됩니다.</p>
+            </div>
+            <div class="text-right">
+              <span id="checkPct" class="font-serif text-3xl font-semibold text-flame-300">0%</span>
+            </div>
+          </div>
+          <div class="h-2 w-full overflow-hidden rounded-full bg-white/10">
+            <div id="checkBar" class="h-full rounded-full bg-gradient-to-r from-flame-500 to-emerald-400 transition-all duration-300" style="width:0%"></div>
+          </div>
+          <div id="checklistBox" class="space-y-2.5"></div>
+          <div class="rounded-2xl border border-white/10 bg-white/[.02] p-4">
+            <p class="text-xs font-bold text-flame-300">면접 대비 자가 꼬리질문</p>
+            <ul class="mt-2 list-disc space-y-1 pl-4 text-xs leading-relaxed text-zinc-300">
+              <li>버튼 클릭부터 DB·LLM 처리 후 화면 갱신까지의 전체 흐름을 안 보고 설명할 수 있는가?</li>
+              <li>사용자가 10배 늘어나거나 외부 AI API가 실패·타임아웃될 때 어떻게 방어하는가?</li>
+              <li>다른 사용자/워크스페이스 데이터에 무단 접근하지 못하도록 어느 레이어에서 막았는가?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="flex items-center justify-between gap-3 border-t border-white/10 bg-ink-950/70 px-5 py-3.5">
+        <span class="text-xs text-zinc-500">수정 내용은 브라우저에 즉시 저장되며 .md / JSON으로 내보낼 수 있습니다.</span>
+        <div class="flex gap-2">
+          <button type="button" data-prd-close class="rounded-xl border border-white/10 px-4 py-2 text-xs font-semibold text-zinc-300 hover:border-white/30">닫기</button>
+          <button type="button" id="btnSavePrd" class="rounded-xl btn-gold px-5 py-2 text-xs font-bold">기획서 저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD / EDIT PROJECT MODAL ================= -->
+  <div id="modal" class="fixed inset-0 z-[55] hidden items-end justify-center bg-black/80 p-0 backdrop-blur-sm sm:items-center sm:p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <form id="form" class="scrollbar-thin max-h-[92vh] w-full overflow-y-auto rounded-t-3xl border border-flame-500/25 bg-ink-900 p-6 shadow-2xl sm:max-w-xl sm:rounded-3xl" novalidate>
+      <div class="mb-5 flex items-center justify-between">
+        <h3 id="modalTitle" class="text-lg font-bold text-white">새 SaaS 프로젝트 추가</h3>
+        <button type="button" data-close class="grid h-9 w-9 place-items-center rounded-full text-zinc-400 hover:bg-white/5 hover:text-white" aria-label="닫기">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <input type="hidden" name="id" />
+      <div class="space-y-4">
+        <label class="block">
+          <span class="field-label">프로젝트명 <b class="text-flame-400">*</b></span>
+          <input name="title" required maxlength="60" class="field" placeholder="예) AI 마케팅 콘텐츠 자동화 스튜디오" />
+        </label>
+
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <label class="block">
+            <span class="field-label">대표 SaaS 유형 <b class="text-flame-400">*</b></span>
+            <select name="slot" required class="field"></select>
+          </label>
+          <label class="block">
+            <span class="field-label">진행 상태</span>
+            <select name="status" class="field">
+              <option value="기획중">기획중</option>
+              <option value="개발중">개발중</option>
+              <option value="배포완료">배포완료</option>
+            </select>
+          </label>
+          <label class="block col-span-2 sm:col-span-1">
+            <span class="field-label">연도</span>
+            <input name="year" type="number" min="2020" max="2100" class="field" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="field-label">한 줄 소개 <b class="text-flame-400">*</b></span>
+          <textarea name="desc" required maxlength="180" rows="2" class="field resize-none" placeholder="누구의 어떤 문제를 어떻게 해결하는 SaaS인지 간단히 적어 주세요."></textarea>
+        </label>
+
+        <div class="grid gap-3 sm:grid-cols-2">
+          <label class="block">
+            <span class="field-label">핵심 타깃 고객</span>
+            <input name="target" class="field" placeholder="예) 1인 마케터, 소규모 B2B 팀" />
+          </label>
+          <label class="block">
+            <span class="field-label">수익 모델</span>
+            <input name="pricing" class="field" placeholder="예) Freemium + 월 구독" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="field-label">기술 스택 / 보조 태그 <span class="text-zinc-500">(쉼표로 구분)</span></span>
+          <input name="tags" class="field" placeholder="Next.js, TypeScript, Supabase, OpenAI API" />
+        </label>
+
+        <div class="grid gap-3 sm:grid-cols-2">
+          <label class="block">
+            <span class="field-label">라이브 데모 URL</span>
+            <input name="live" type="url" class="field" placeholder="https://..." />
+          </label>
+          <label class="block">
+            <span class="field-label">GitHub 저장소 URL</span>
+            <input name="source" type="url" class="field" placeholder="https://github.com/jake12733/..." />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="field-label">GitHub 기획서(.md) 링크 <span class="text-zinc-500">(선택)</span></span>
+          <input name="planUrl" type="url" class="field" placeholder="https://github.com/jake12733/saas-archive/blob/main/plans/..." />
+        </label>
+
+        <p id="formError" class="hidden rounded-lg bg-red-500/10 px-3 py-2 text-sm text-red-300"></p>
+      </div>
+
+      <div class="mt-6 flex gap-2">
+        <button type="button" data-close class="flex-1 rounded-xl border border-white/10 py-3 text-sm font-semibold text-zinc-300 hover:border-white/30">취소</button>
+        <button type="submit" id="submitBtn" class="flex-1 rounded-xl btn-gold py-3 text-sm font-bold">추가하기</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 translate-y-4 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-950 opacity-0 shadow-xl transition"></div>
+
+  <script>
+    /* =========================================================
+       Owen's SaaS Archive — 프로젝트 + 기획서(PRD) 데이터
+       ========================================================= */
+    const STORAGE_KEY = 'owen_saas_archive_v1';
+
+    const SAAS_SLOTS = [
+      { id: 'Micro-SaaS', eyebrow: 'Micro-SaaS · Prosumer', desc: '작고 명확한 문제 하나를 빠르게 해결하는 초소형 SaaS' },
+      { id: 'B2B',        eyebrow: 'B2B · Enterprise AX',   desc: '팀·조직 단위 멀티테넌시, 권한(RBAC), 업무 자동화 SaaS' },
+      { id: 'B2B2C',      eyebrow: 'B2B2C · Platform',      desc: '크리에이터·강사·기업이 최종 소비자에게 서비스하는 플랫폼형 SaaS' },
+      { id: 'B2C',        eyebrow: 'B2C · Consumer',        desc: '일반 개인 소비자를 대상으로 하는 구독형 웹 서비스' },
+      { id: 'AI-native',  eyebrow: 'AI-native · Agentic',   desc: 'LLM·RAG·에이전트 워크플로우를 핵심으로 결합한 AI SaaS' },
+      { id: 'API-first',  eyebrow: 'API-first · B2D',       desc: '개발자용 API 키·사용량 측정(Metering)·Webhook 기반 SaaS' },
+      { id: 'Vertical',   eyebrow: 'Vertical · Industry',   desc: '특정 산업(의료·교육·마케팅·복지 등)에 깊게 특화된 SaaS' },
+    ];
+
+    const CHECKLIST_ITEMS = [
+      { id: 'prd_done',        title: '1페이지 기획서(문제 · 기능 · 수익모델) 작성 완료', desc: '왜 이 SaaS를 만들었는지와 MVP 범위를 명확히 정리했다.' },
+      { id: 'data_flow',       title: 'End-to-End 데이터 흐름 말로 설명 가능', desc: '브라우저 → API → 인증/권한 → DB/LLM → 화면 렌더링 흐름을 안 보고 설명할 수 있다.' },
+      { id: 'tradeoff',        title: '기술 선택 이유(Trade-off) 2가지 이상 정리', desc: '왜 A 기술 대신 B를 골랐는지 장단점 기준으로 답할 수 있다.' },
+      { id: 'saas_core',       title: 'SaaS 핵심 메커니즘 1개 이상 구현', desc: '멀티테넌시, RBAC, 크레딧/사용량 제한(Metering), 구독 웹훅 중 하나 이상 구현.' },
+      { id: 'troubleshooting', title: '트러블슈팅 사례 1건 이상 4단계 기록', desc: '문제 → 원인 → 해결 → 배운 점 구조로 기록했다.' },
+      { id: 'demo_ready',      title: '배포 완료 및 3분 라이브 데모 시연 준비', desc: '실제 동작하는 URL과 3분 발표 대본이 준비되어 있다.' }
+    ];
+
+    const DEFAULT_PROJECTS = [
+      {
+        id: 'saas-01-ai-marketing',
+        title: 'AI 마케팅 콘텐츠 자동화 스튜디오',
+        slot: 'Micro-SaaS',
+        status: '기획중',
+        year: 2026,
+        desc: '유튜브 URL이나 상품 설명을 입력하면 브랜드 톤에 맞춰 뉴스레터·스레드·카드뉴스 문구를 생성하고 노션으로 내보내는 Micro-SaaS.',
+        target: '1인 마케터, 소규모 브랜드 운영자, AI 크리에이터',
+        pricing: 'Freemium (월 10 크레딧) + Pro 월 구독',
+        tags: ['Next.js', 'TypeScript', 'Supabase', 'OpenAI API', 'SSE'],
+        live: '',
+        source: '',
+        planUrl: 'https://github.com/jake12733/saas-archive/blob/main/plans/01-ai-marketing-micro-saas.md',
+        prd: {
+          problem: '- 마케터가 하나의 콘텐츠(영상/블로그)를 채널별(뉴스레터, 인스타, 스레드)로 재가공하는 데 매번 2~3시간을 소모함.\n- 범용 챗봇에 매번 브랜드 톤과 포맷을 복붙해 지시하는 과정이 반복적이고 결과 품질이 들쭉날쭉함.',
+          features: '- 핵심 기능 1: 브랜드 보이스(톤앤매너, 금지어, 타깃 독자) 프로필 저장\n- 핵심 기능 2: 원문/링크 입력 시 3개 채널용 콘텐츠를 SSE 스트리밍으로 동시 생성\n- 핵심 기능 3: 생성 히스토리 저장, 원클릭 복사 및 노션/Webhook 내보내기\n- 사용자 흐름: 로그인 → 브랜드 프로필 선택 → 원문 입력 → 생성(크레딧 차감) → 편집 및 내보내기',
+          business: '- 무료 플랜: 월 10 크레딧, 브랜드 프로필 1개\n- 유료 플랜(Pro): 월 300 크레딧, 무제한 프로필, 노션 자동 내보내기\n- 사용량 측정(Metering): 생성 API 호출 전 트랜잭션으로 잔여 크레딧 검증 및 차감, 실패 시 자동 환불',
+          architecture: '- 프론트/백엔드: Next.js App Router + Route Handlers\n- DB/인증: Supabase (PostgreSQL + Auth + RLS)\n- 주요 테이블: `users`, `brand_profiles`, `generations`, `credit_ledger`\n- AI 파이프라인: 원문 요약 → 채널별 구조화 프롬프트 실행 → SSE 스트리밍 전송',
+          decisions: '- [선택] 일반 JSON 응답 대신 SSE 스트리밍 적용\n  이유: LLM 생성에 6~12초가 소요되어 빈 로딩 화면 대신 첫 토큰을 1초 내에 보여줘 체감 속도를 높이기 위해.\n- [선택] 크레딧을 단순 숫자 덮어쓰기가 아닌 `credit_ledger` 원장 테이블로 기록\n  이유: 결제·차감·환불 이력을 감사(Audit)하고 동시 요청 시 정합성을 지키기 위해.',
+          troubleshooting: '- (구현 중 발생한 실제 이슈를 [문제 → 원인 → 해결 → 배운 점] 순으로 기록 예정)',
+          pitch: '- 3분 요약: 마케터의 반복 콘텐츠 재가공 문제를 해결하는 AI-native Micro-SaaS입니다. 단순 AI 래퍼를 넘어 브랜드 컨텍스트 관리, SSE 스트리밍 UX, 원장 기반 크레딧 과금 구조까지 풀스택으로 설계했습니다.\n- 예상 질문 Q1: 동시에 생성 버튼을 두 번 누르면 크레딧이 중복 차감되지 않나요?\n  A1: Idempotency Key와 DB 트랜잭션(조건부 업데이트)으로 중복 요청을 차단했습니다.'
+        },
+        checklist: { prd_done: true, data_flow: false, tradeoff: true, saas_core: false, troubleshooting: false, demo_ready: false }
+      },
+      {
+        id: 'saas-02-b2b-ax-desk',
+        title: 'B2B 리드·CS 자동화(AX) 워크스페이스',
+        slot: 'B2B',
+        status: '기획중',
+        year: 2026,
+        desc: '고객 문의 폼·이메일을 웹훅으로 수집해 AI가 자동 분류·요약·답변 초안을 만들고 슬랙으로 알림을 보내주는 팀용 B2B SaaS.',
+        target: '소규모 B2B 스타트업, 마케팅/AX 에이전시 운영팀',
+        pricing: '워크스페이스 좌석(Seat) + 월 자동화 실행 건수 티어 과금',
+        tags: ['Next.js', 'PostgreSQL', 'Prisma', 'RBAC', 'Webhook', 'Slack API'],
+        live: '',
+        source: '',
+        planUrl: 'https://github.com/jake12733/saas-archive/blob/main/plans/02-b2b-ax-workspace.md',
+        prd: {
+          problem: '- 소규모 팀에 매일 들어오는 제휴·견적·CS 문의를 담당자가 수동으로 분류하고 복붙 답변하느라 리드 응답 속도가 늦어짐.\n- 누가 어떤 문의에 답했는지 추적이 안 되어 영업 기회가 누락됨.',
+          features: '- 핵심 기능 1: 워크스페이스별 전용 Webhook URL 및 임베드 문의 폼 발급\n- 핵심 기능 2: 문의 접수 시 AI가 카테고리(견적/기술/제휴)·긴급도 분류 + 답변 초안 생성\n- 핵심 기능 3: 슬랙 알림 발송 및 자동화 실행 로그(성공/실패/재시도) 대시보드',
+          business: '- 멀티테넌시: 모든 업무 테이블에 `workspace_id`를 두고 미들웨어/쿼리 레벨에서 엄격히 격리\n- 권한(RBAC): Owner(결제·멤버 초대), Admin(자동화 규칙 설정), Member(문의 확인·답변)',
+          architecture: '- 주요 테이블: `workspaces`, `memberships`, `inbound_tickets`, `automation_rules`, `execution_logs`\n- 비동기 흐름: Webhook 수신 → 즉시 202 응답 & DB 저장 → 백그라운드 워커가 LLM 분류 및 Slack 발송 → 결과 로그 기록',
+          decisions: '- [선택] 테넌트별 DB 분리 대신 단일 DB + `workspace_id` 컬럼 방식 선택\n  이유: 초기 운영 비용과 스키마 마이그레이션 복잡도를 줄이면서 B2B 멀티테넌시의 핵심인 접근 제어를 확실히 구현하기 위해.',
+          troubleshooting: '- (구현 중 발생한 웹훅 재시도, 권한 검증, 외부 API 타임아웃 해결 사례 기록 예정)',
+          pitch: '- 3분 요약: 기업의 반복 문의 대응을 자동화하는 B2B AX SaaS입니다. 멀티테넌시, RBAC 권한 관리, 비동기 웹훅 처리와 실행 로그 모니터링에 집중해 실무형 백엔드 구조를 설계했습니다.'
+        },
+        checklist: { prd_done: true, data_flow: false, tradeoff: false, saas_core: false, troubleshooting: false, demo_ready: false }
+      },
+      {
+        id: 'saas-03-rag-class',
+        title: 'RAG AI 튜터 미니 구독형 클래스 플랫폼',
+        slot: 'B2B2C',
+        status: '기획중',
+        year: 2026,
+        desc: '강사가 강의 자료를 업로드하면 수강생이 구독 후 학습하고, 강의 자료 근거 기반 AI 튜터에게 24시간 질문하는 B2B2C 교육 SaaS.',
+        target: '지식 크리에이터, 온라인 강사, AI 교육 수강생',
+        pricing: '수강생 월 정기 구독 + 강사 수수료 모델',
+        tags: ['Next.js', 'TypeScript', 'pgvector', 'RAG', 'Stripe/Toss'],
+        live: '',
+        source: '',
+        planUrl: 'https://github.com/jake12733/saas-archive/blob/main/plans/03-rag-class-platform.md',
+        prd: {
+          problem: '- 온라인 강의 수강생이 실습 중 막혀도 강사 답변을 기다리다 학습을 포기함.\n- 일반 AI에게 물어보면 강의 커리큘럼과 다른 엉뚱한 답(할루시네이션)을 줄 때가 많음.',
+          features: '- 핵심 기능 1: 강사 대시보드에서 강의 노트/PDF 업로드 시 자동 청킹 및 벡터 임베딩\n- 핵심 기능 2: 수강생 전용 학습 뷰 + 강의 자료 출처(섹션)를 함께 표시하는 RAG 챗봇\n- 핵심 기능 3: 구독 결제(테스트 모드) 및 웹훅 기반 수강 권한 자동 부여/회수',
+          business: '- 무료 체험: 1강 미리보기 + AI 튜터 질문 5회\n- 구독 회원: 전체 강의 열람 + AI 튜터 무제한(Fair-use Rate Limit 적용)',
+          architecture: '- 주요 테이블: `courses`, `lessons`, `document_chunks(vector)`, `subscriptions`, `chat_messages`\n- RAG 파이프라인: 텍스트 추출 → 500토큰 청킹(오버랩 100) → 임베딩 저장 → 유사도 검색 Top-K → 출처 포함 답변 생성',
+          decisions: '- [선택] 별도 벡터 DB 대신 PostgreSQL + `pgvector` 사용\n  이유: 수강 권한(`subscriptions`)과 벡터 검색을 같은 DB 쿼리 조건으로 묶어 권한 없는 강의 문서가 검색되는 문제를 원천 차단하기 위해.',
+          troubleshooting: '- (구현 중 발생한 청킹 크기 튜닝, 결제 웹훅 멱등성 처리 사례 기록 예정)',
+          pitch: '- 3분 요약: 지식 교육 플랫폼에 RAG AI 튜터와 구독 결제를 결합한 B2B2C SaaS입니다. 결제 상태 동기화와 권한 기반 벡터 검색에 중점을 두고 설계했습니다.'
+        },
+        checklist: { prd_done: true, data_flow: false, tradeoff: false, saas_core: false, troubleshooting: false, demo_ready: false }
+      }
+    ];
+
+    /* ================= STATE & HELPERS ================= */
+    const $ = (s) => document.querySelector(s);
+    const esc = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    let projects = [];
+    let state = { status: '전체', slot: '전체', q: '', showEmpty: false };
+    let activePrdId = null;
+    let draftChecklist = {};
+    let toastTimer;
+
+    function loadData() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed) && parsed.length) {
+            projects = parsed;
+            return;
+          }
+        }
+      } catch {}
+      projects = structuredClone(DEFAULT_PROJECTS);
+      saveData();
+    }
+
+    function saveData() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(projects)); } catch {}
+    }
+
+    function toast(msg) {
+      const t = $('#toast');
+      t.textContent = msg;
+      t.classList.remove('opacity-0', 'translate-y-4');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.add('opacity-0', 'translate-y-4'), 2400);
+    }
+
+    function calcReadiness(checklist = {}) {
+      const done = CHECKLIST_ITEMS.filter(i => Boolean(checklist[i.id])).length;
+      return Math.round((done / CHECKLIST_ITEMS.length) * 100);
+    }
+
+    function calcPrdPct(prd = {}) {
+      const keys = ['problem', 'features', 'business', 'architecture', 'decisions', 'troubleshooting', 'pitch'];
+      const filled = keys.filter(k => (prd[k] || '').trim().length >= 15).length;
+      return Math.round((filled / keys.length) * 100);
+    }
+
+    function statusPillClass(status) {
+      if (status === '배포완료') return 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/30';
+      if (status === '개발중')   return 'bg-amber-500/20 text-amber-300 border border-amber-400/30';
+      return 'bg-flame-500/15 text-flame-300 border border-flame-400/30';
+    }
+
+    /* ================= MOCKUP PREVIEW (live URL) ================= */
+    function shotUrl(url, [w, h]) {
+      if (!/^https:\/\//.test(url)) return '';
+      const out = w > 600 ? [640, 400] : [w, h];
+      return `https://s0.wp.com/mshots/v1/${encodeURIComponent(url)}?w=${out[0]}&h=${out[1]}&vpw=${w}&vph=${h}`;
+    }
+
+    window.posterLoaded = function(img) {
+      const box = img.closest('.mk-screen');
+      box?.classList.add('shot');
+    };
+
+    function mockupHtml(p) {
+      let host = p.live;
+      try { const u = new URL(p.live); host = u.host + u.pathname.replace(/\/$/, ''); } catch {}
+      const laptopShot = shotUrl(p.live, [1280, 800]);
+      const phoneShot = shotUrl(p.live, [390, 844]);
+      return `
+        <div class="mk relative h-56 overflow-hidden">
+          <div class="absolute inset-0" style="background:radial-gradient(120% 90% at 20% 0%, rgba(212,175,55,.22), transparent 60%), radial-gradient(80% 80% at 100% 100%, rgba(212,175,55,.08), transparent 60%), #070707"></div>
+          <div class="mk-laptop">
+            <div class="mk-lid">
+              <div class="mk-bar"><i></i><i></i><i></i><span>${esc(host)}</span></div>
+              <div class="mk-screen aspect-[16/10]">
+                <div class="mk-skel"><i></i><i></i><i></i></div>
+                ${laptopShot ? `<img class="mk-poster" src="${esc(laptopShot)}" alt="" decoding="async" onload="posterLoaded(this)" onerror="this.remove()">` : ''}
+              </div>
+            </div>
+            <div class="mk-base"></div>
+          </div>
+          <div class="mk-phone">
+            <span class="mk-notch"></span>
+            <div class="mk-screen mk-phone-screen">
+              <div class="mk-skel"><i></i><i></i><i></i></div>
+              ${phoneShot ? `<img class="mk-poster" src="${esc(phoneShot)}" alt="" decoding="async" onload="posterLoaded(this)" onerror="this.remove()">` : ''}
+            </div>
+          </div>`;
+    }
+
+    function cardHtml(p, i) {
+      const prdPct = calcPrdPct(p.prd);
+      const readyPct = calcReadiness(p.checklist);
+      const hasLive = Boolean(p.live);
+      return `
+      <article class="card card-gold group flex flex-col overflow-hidden rounded-2xl" style="transition-delay:${i * 55}ms">
+        ${hasLive ? mockupHtml(p) : `
+        <div class="relative h-56 overflow-hidden" style="background:radial-gradient(120% 100% at 0% 0%, rgba(212,175,55,.32), transparent 56%), linear-gradient(135deg, #19150b, #070707)">
+          <div class="absolute inset-0 opacity-25" style="background-image:radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px);background-size:14px 14px"></div>
+          <span class="thumb-mark absolute -bottom-7 right-3 select-none font-serif text-[124px] font-semibold italic leading-none text-flame-400/20">${esc((p.title || 'S').charAt(0))}</span>
+          <div class="absolute inset-x-4 bottom-4">
+            <p class="text-[11px] font-semibold uppercase tracking-widest text-flame-300/80">${esc(p.pricing || 'SaaS Model')}</p>
+            <p class="mt-0.5 truncate text-xs text-zinc-400">${esc(p.target || '타깃 고객 미입력')}</p>
+          </div>`}
+          <div class="absolute left-3.5 top-3.5 flex items-center gap-1.5">
+            <span class="rounded-full bg-ink-950/75 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-white backdrop-blur">${esc(p.slot)}</span>
+            <span class="rounded-full px-2.5 py-1 text-[10.5px] font-bold backdrop-blur ${statusPillClass(p.status)}">${esc(p.status)}</span>
+          </div>
+          <div class="absolute right-3 top-3 flex gap-1.5">
+            <button type="button" data-edit="${esc(p.id)}" class="icon-btn" title="프로젝트 정보 수정" aria-label="${esc(p.title)} 수정">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/></svg>
+            </button>
+            <button type="button" data-del="${esc(p.id)}" class="icon-btn hover:!bg-red-500 hover:!text-white" title="삭제" aria-label="${esc(p.title)} 삭제">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-1 flex-col p-5">
+          <div class="flex items-start justify-between gap-2">
+            <h2 class="text-lg font-semibold tracking-tight text-white">${esc(p.title)}</h2>
+            <span class="shrink-0 text-[11px] font-medium text-zinc-500">${esc(p.year || '')}</span>
+          </div>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">${esc(p.desc)}</p>
+
+          <ul class="mt-3.5 flex flex-wrap gap-1.5">
+            ${(p.tags || []).slice(0, 5).map(t => `<li class="rounded-full border border-flame-500/25 px-2.5 py-0.5 text-[11px] font-medium text-flame-300/90">${esc(t)}</li>`).join('')}
+          </ul>
+
+          <!-- 기획서 & 면접 설명력 바 -->
+          <div class="mt-4 space-y-1.5 border-t border-white/5 pt-3">
+            <div class="flex items-center justify-between text-[11px] text-zinc-400">
+              <span>기획서 작성률 <b class="text-zinc-200">${prdPct}%</b></span>
+              <span>면접 설명 준비도 <b class="text-flame-300">${readyPct}%</b></span>
+            </div>
+            <div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-flame-500 to-emerald-400" style="width:${readyPct}%"></div>
+            </div>
+          </div>
+
+          <!-- 버튼 영역 -->
+          <div class="mt-4 flex flex-col gap-2">
+            <button type="button" data-prd="${esc(p.id)}"
+              class="inline-flex w-full items-center justify-center gap-1.5 rounded-xl btn-gold px-3 py-2.5 text-sm font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-flame-300">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M9 8h3M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"/></svg>
+              기획서(PRD) 열기
+            </button>
+            <div class="flex gap-2">
+              ${p.live
+                ? `<a href="${esc(p.live)}" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border border-white/10 px-3 py-2 text-xs font-semibold text-zinc-200 transition hover:border-flame-400 hover:text-white">라이브 데모 ↗</a>`
+                : `<span class="flex-1 inline-flex cursor-not-allowed items-center justify-center rounded-xl border border-white/5 px-3 py-2 text-xs font-medium text-zinc-600">데모 준비중</span>`}
+              ${p.source
+                ? `<a href="${esc(p.source)}" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border border-white/10 px-3 py-2 text-xs font-semibold text-zinc-200 transition hover:border-flame-400 hover:text-white">GitHub ↗</a>`
+                : `<span class="flex-1 inline-flex cursor-not-allowed items-center justify-center rounded-xl border border-white/5 px-3 py-2 text-xs font-medium text-zinc-600">코드 준비중</span>`}
+            </div>
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function addCardHtml(slotObj) {
+      return `
+      <button type="button" data-addslot="${esc(slotObj.id)}"
+        class="group flex min-h-[260px] flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-white/10 bg-white/[.015] p-6 text-center text-zinc-500 transition hover:border-flame-400/60 hover:bg-flame-500/[.04] hover:text-flame-300">
+        <span class="grid h-12 w-12 place-items-center rounded-full border border-current transition group-hover:scale-110">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+        <span class="text-sm font-semibold">${esc(slotObj.id)} 프로젝트 추가</span>
+        <span class="text-xs opacity-75">${esc(slotObj.desc)}</span>
+      </button>`;
+    }
+
+    function sectionHtml(slotObj, items, startIdx) {
+      const cards = items.map((p, i) => cardHtml(p, startIdx + i)).join('');
+      return `
+      <section>
+        <div class="mb-6 flex items-end justify-between gap-4 border-b border-flame-500/20 pb-3">
+          <div>
+            <p class="font-serif text-sm font-medium italic tracking-[.15em] text-flame-400">${esc(slotObj.eyebrow)}</p>
+            <h3 class="mt-1 text-xl font-semibold tracking-tight text-white">${esc(slotObj.id)}</h3>
+          </div>
+          <div class="flex shrink-0 items-center gap-2">
+            ${items.length > 1 ? `
+            <div class="slot-nav hidden items-center gap-1.5 mr-1">
+              <span class="slot-page mr-1 text-xs tabular-nums text-zinc-500">1 / 1</span>
+              <button type="button" data-slide="prev" class="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-zinc-300 transition hover:border-flame-400 hover:text-flame-300 disabled:pointer-events-none disabled:opacity-30" aria-label="이전">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg>
+              </button>
+              <button type="button" data-slide="next" class="inline-flex h-8 items-center gap-1 rounded-full border border-flame-500/50 bg-flame-500/10 px-3.5 text-xs font-semibold text-flame-300 transition hover:bg-flame-500 hover:text-ink-900 disabled:pointer-events-none disabled:opacity-30" aria-label="다음">
+                더보기<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+              </button>
+            </div>` : ''}
+            <span class="text-sm text-zinc-500">${items.length}개</span>
+            <button type="button" data-addslot="${esc(slotObj.id)}" class="grid h-7 w-7 place-items-center rounded-full border border-white/10 text-zinc-400 transition hover:border-flame-400 hover:text-flame-300" title="${esc(slotObj.id)}에 새 SaaS 추가">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </div>
+        ${items.length
+          ? `<div class="slot-wrap relative"><div class="slot-track">${cards}</div><div class="slot-fade" aria-hidden="true"></div></div>`
+          : `<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">${addCardHtml(slotObj)}</div>`}
+      </section>`;
+    }
+
+    /* ================= RENDER ================= */
+    function renderStats() {
+      const total = projects.length;
+      const withPrd = projects.filter(p => calcPrdPct(p.prd) >= 40).length;
+      const deployed = projects.filter(p => p.status === '배포완료').length;
+      const avgReady = total ? Math.round(projects.reduce((a, p) => a + calcReadiness(p.checklist), 0) / total) : 0;
+
+      const items = [
+        ['전체 SaaS', total, ''],
+        ['기획서 작성', withPrd, ''],
+        ['배포 완료', deployed, ''],
+        ['설명 준비도', avgReady, '%']
+      ];
+      $('#stats').innerHTML = items.map(([k, v, suf]) => `
+        <div class="rounded-2xl border border-white/10 bg-ink-900/70 px-4 py-3 text-center backdrop-blur-md">
+          <dt class="text-xs font-medium text-zinc-400">${k}</dt>
+          <dd class="mt-1 font-serif text-3xl font-semibold text-flame-300">${v}${suf}</dd>
+        </div>`).join('');
+    }
+
+    function renderFilters() {
+      const statuses = ['전체', '기획중', '개발중', '배포완료'];
+      $('#statusFilters').innerHTML = statuses.map(st => {
+        const n = st === '전체' ? projects.length : projects.filter(p => p.status === st).length;
+        return `<button type="button" data-status="${st}" aria-pressed="${st === state.status}"
+          class="chip shrink-0 rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-zinc-300 transition hover:border-flame-400 hover:text-white">
+          ${st} <span class="ml-1 opacity-60">${n}</span></button>`;
+      }).join('');
+
+      $('#slotFilters').innerHTML = ['전체', ...SAAS_SLOTS.map(s => s.id)].map(sl => {
+        const n = sl === '전체' ? projects.length : projects.filter(p => p.slot === sl).length;
+        return `<button type="button" data-slot="${sl}" aria-pressed="${sl === state.slot}"
+          class="chip shrink-0 rounded-lg border border-white/10 px-3 py-1.5 text-xs font-medium ${n ? 'text-zinc-300' : 'text-zinc-600'} transition hover:border-flame-400 hover:text-white">
+          ${sl} <span class="ml-0.5 opacity-60">${n}</span></button>`;
+      }).join('');
+
+      const toggleBtn = $('#toggleEmptySlots');
+      toggleBtn.textContent = state.showEmpty ? '빈 슬롯 숨기기' : '빈 슬롯 보기';
+      toggleBtn.classList.toggle('border-flame-400', state.showEmpty);
+      toggleBtn.classList.toggle('text-flame-300', state.showEmpty);
+    }
+
+    function renderGrid() {
+      const q = state.q.trim().toLowerCase();
+      const filtered = projects.filter(p => {
+        if (state.status !== '전체' && p.status !== state.status) return false;
+        if (state.slot !== '전체' && p.slot !== state.slot) return false;
+        if (q) {
+          const text = [p.title, p.desc, p.slot, p.status, p.target, p.pricing, ...(p.tags || []), ...Object.values(p.prd || {})].join(' ').toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      });
+
+      const slotsToRender = state.slot === '전체' ? SAAS_SLOTS : SAAS_SLOTS.filter(s => s.id === state.slot);
+      let html = '', idx = 0;
+
+      slotsToRender.forEach(slotObj => {
+        const items = filtered.filter(p => p.slot === slotObj.id);
+        if (!items.length && !state.showEmpty && state.slot === '전체') return;
+        html += sectionHtml(slotObj, items, idx);
+        idx += items.length;
+      });
+
+      const grid = $('#grid');
+      grid.innerHTML = html;
+      $('#empty').classList.toggle('hidden', !!html);
+
+      requestAnimationFrame(() => grid.querySelectorAll('.card').forEach(el => el.classList.add('show')));
+      grid.querySelectorAll('.slot-track').forEach(t => {
+        t.addEventListener('scroll', () => updateSlotNav(t), { passive: true });
+        updateSlotNav(t);
+      });
+    }
+
+    function slotStep(track) {
+      const first = track.firstElementChild;
+      if (!first) return { per: 1, size: track.clientWidth };
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      const per = Math.max(1, Math.round((track.clientWidth + gap) / (first.offsetWidth + gap)));
+      return { per, size: per * (first.offsetWidth + gap) };
+    }
+
+    function updateSlotNav(track) {
+      const sec = track.closest('section');
+      const nav = sec?.querySelector('.slot-nav');
+      const fade = sec?.querySelector('.slot-fade');
+      const overflow = track.scrollWidth - track.clientWidth > 4;
+      const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+      if (fade) fade.classList.toggle('on', overflow && !atEnd);
+      if (!nav) return;
+      nav.classList.toggle('hidden', !overflow);
+      nav.classList.toggle('flex', overflow);
+      if (!overflow) return;
+      const { per } = slotStep(track);
+      const pages = Math.ceil(track.children.length / per);
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      const firstIdx = Math.round(track.scrollLeft / (track.firstElementChild.offsetWidth + gap));
+      const page = atEnd ? pages : Math.min(pages, Math.floor(firstIdx / per) + 1);
+      nav.querySelector('.slot-page').textContent = `${page} / ${pages}`;
+      nav.querySelector('[data-slide="prev"]').disabled = track.scrollLeft <= 4;
+      nav.querySelector('[data-slide="next"]').disabled = atEnd;
+    }
+
+    function refresh() {
+      renderStats();
+      renderFilters();
+      renderGrid();
+    }
+
+    /* ================= PRD MODAL ================= */
+    function formatSimpleLines(text) {
+      const raw = (text || '').trim();
+      if (!raw) return '<p class="text-zinc-500 italic">아직 작성되지 않았습니다. [기획서 작성 · 수정] 탭에서 입력해 보세요.</p>';
+      const lines = esc(raw).split(/\r?\n/);
+      const inline = (s) => s.replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<strong class="text-white">$1</strong>');
+      let out = '', inList = false;
+      for (const l of lines) {
+        const t = l.trim();
+        if (!t) { if (inList) { out += '</ul>'; inList = false; } continue; }
+        if (t.startsWith('- ')) {
+          if (!inList) { out += '<ul>'; inList = true; }
+          out += `<li>${inline(t.slice(2))}</li>`;
+        } else {
+          if (inList) { out += '</ul>'; inList = false; }
+          out += `<p>${inline(t)}</p>`;
+        }
+      }
+      if (inList) out += '</ul>';
+      return out;
+    }
+
+    function openPrdModal(id, initialTab = 'read') {
+      const p = projects.find(x => x.id === id);
+      if (!p) return;
+      activePrdId = id;
+      draftChecklist = { ...(p.checklist || {}) };
+
+      $('#prdModalTitle').textContent = p.title;
+      $('#prdSlotBadge').textContent = p.slot;
+      $('#prdStatusBadge').textContent = p.status;
+      $('#prdStatusBadge').className = `rounded-full px-2.5 py-0.5 text-[11px] font-bold ${statusPillClass(p.status)}`;
+
+      const ghLink = $('#prdGithubPlanLink');
+      if (p.planUrl) {
+        ghLink.href = p.planUrl;
+        ghLink.classList.remove('hidden');
+      } else {
+        ghLink.classList.add('hidden');
+      }
+
+      // Meta summary
+      $('#prdMetaSummary').innerHTML = `
+        <div><p class="text-[11px] text-zinc-500">핵심 타깃 고객</p><p class="mt-0.5 text-sm font-medium text-zinc-200">${esc(p.target || '-')}</p></div>
+        <div><p class="text-[11px] text-zinc-500">수익 모델</p><p class="mt-0.5 text-sm font-medium text-flame-300">${esc(p.pricing || '-')}</p></div>
+        <div class="sm:col-span-2"><p class="text-[11px] text-zinc-500">기술 스택</p><p class="mt-1 flex flex-wrap gap-1.5">${(p.tags || []).map(t => `<span class="rounded-full border border-flame-500/25 px-2.5 py-0.5 text-[11px] text-flame-300">${esc(t)}</span>`).join('') || '-'}</p></div>
+      `;
+
+      // Populate Edit inputs
+      const prd = p.prd || {};
+      $('#eProblem').value = prd.problem || '';
+      $('#eFeatures').value = prd.features || '';
+      $('#eBusiness').value = prd.business || '';
+      $('#eArchitecture').value = prd.architecture || '';
+      $('#eDecisions').value = prd.decisions || '';
+      $('#eTroubleshooting').value = prd.troubleshooting || '';
+      $('#ePitch').value = prd.pitch || '';
+
+      renderPrdReadView();
+      renderChecklist();
+      switchPrdTab(initialTab);
+
+      const m = $('#prdModal');
+      m.classList.remove('hidden'); m.classList.add('flex');
+      document.body.classList.add('modal-open');
+    }
+
+    function renderPrdReadView() {
+      const sections = [
+        ['1. 문제 정의 & 타깃 고객 (Why)', $('#eProblem').value],
+        ['2. 핵심 기능 & 사용자 흐름 (What / MVP)', $('#eFeatures').value],
+        ['3. SaaS 비즈니스 구조 (과금 · 권한 · 멀티테넌시)', $('#eBusiness').value],
+        ['4. 시스템 아키텍처 & DB / API 설계', $('#eArchitecture').value],
+        ['5. 기술적 의사결정 & 트레이드오프 (ADR)', $('#eDecisions').value],
+        ['6. 트러블슈팅 로그', $('#eTroubleshooting').value],
+        ['7. 3분 발표 대본 & 예상 꼬리질문 Q&A', $('#ePitch').value]
+      ];
+      $('#prdReadSections').innerHTML = sections.map(([title, content]) => `
+        <div class="rounded-2xl border border-white/10 bg-ink-950/60 p-4 sm:p-5">
+          <h3>${title}</h3>
+          ${formatSimpleLines(content)}
+        </div>`).join('');
+    }
+
+    function renderChecklist() {
+      const pct = calcReadiness(draftChecklist);
+      $('#prdReadinessBadge').textContent = `설명 준비도 ${pct}%`;
+      $('#checkPct').textContent = `${pct}%`;
+      $('#checkBar').style.width = `${pct}%`;
+
+      $('#checklistBox').innerHTML = CHECKLIST_ITEMS.map(item => `
+        <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-ink-950/60 p-3.5 transition hover:border-flame-400/50">
+          <input type="checkbox" data-chk="${item.id}" ${draftChecklist[item.id] ? 'checked' : ''} class="mt-0.5 h-4 w-4 accent-[#d4af37]" />
+          <div>
+            <p class="text-sm font-semibold text-white">${esc(item.title)}</p>
+            <p class="mt-0.5 text-xs text-zinc-400">${esc(item.desc)}</p>
+          </div>
+        </label>`).join('');
+    }
+
+    function switchPrdTab(tab) {
+      document.querySelectorAll('.prd-tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.prdTab === tab)));
+      $('#prdPaneRead').classList.toggle('hidden', tab !== 'read');
+      $('#prdPaneEdit').classList.toggle('hidden', tab !== 'edit');
+      $('#prdPaneCheck').classList.toggle('hidden', tab !== 'check');
+      if (tab === 'read') renderPrdReadView();
+    }
+
+    function closePrdModal() {
+      const m = $('#prdModal');
+      m.classList.add('hidden'); m.classList.remove('flex');
+      document.body.classList.remove('modal-open');
+      activePrdId = null;
+    }
+
+    function buildMarkdownForActive() {
+      const p = projects.find(x => x.id === activePrdId);
+      if (!p) return '';
+      const prd = {
+        problem: $('#eProblem').value.trim(),
+        features: $('#eFeatures').value.trim(),
+        business: $('#eBusiness').value.trim(),
+        architecture: $('#eArchitecture').value.trim(),
+        decisions: $('#eDecisions').value.trim(),
+        troubleshooting: $('#eTroubleshooting').value.trim(),
+        pitch: $('#ePitch').value.trim()
+      };
+      const chkLines = CHECKLIST_ITEMS.map(i => `- [${draftChecklist[i.id] ? 'x' : ' '}] ${i.title}`).join('\n');
+      return [
+        `# ${p.title}`,
+        '',
+        `> ${p.desc || ''}`,
+        '',
+        '## 기본 정보',
+        `- **SaaS 유형**: ${p.slot}`,
+        `- **진행 상태**: ${p.status}`,
+        `- **핵심 타깃 고객**: ${p.target || '-'}`,
+        `- **수익 모델**: ${p.pricing || '-'}`,
+        `- **기술 스택**: ${(p.tags || []).join(', ') || '-'}`,
+        `- **라이브 데모**: ${p.live || '-'}`,
+        `- **GitHub**: ${p.source || '-'}`,
+        '',
+        '## 1. 문제 정의 & 타깃 고객 (Why)',
+        prd.problem || '_미작성_',
+        '',
+        '## 2. 핵심 기능 & 사용자 흐름 (What / MVP Scope)',
+        prd.features || '_미작성_',
+        '',
+        '## 3. SaaS 비즈니스 구조 (과금 · 권한 · 멀티테넌시)',
+        prd.business || '_미작성_',
+        '',
+        '## 4. 시스템 아키텍처 & DB / API 설계',
+        prd.architecture || '_미작성_',
+        '',
+        '## 5. 기술적 의사결정 & 트레이드오프 (ADR)',
+        prd.decisions || '_미작성_',
+        '',
+        '## 6. 트러블슈팅 로그',
+        prd.troubleshooting || '_미작성_',
+        '',
+        '## 7. 3분 발표 대본 & 예상 꼬리질문 Q&A',
+        prd.pitch || '_미작성_',
+        '',
+        '## 설명력 & 면접 점검 체크리스트',
+        chkLines,
+        ''
+      ].join('\n');
+    }
+
+    function parseMdIntoEditor(mdText) {
+      const map = [
+        ['eProblem', /^##\s*1\./m],
+        ['eFeatures', /^##\s*2\./m],
+        ['eBusiness', /^##\s*3\./m],
+        ['eArchitecture', /^##\s*4\./m],
+        ['eDecisions', /^##\s*5\./m],
+        ['eTroubleshooting', /^##\s*6\./m],
+        ['ePitch', /^##\s*7\./m]
+      ];
+      const matches = [...mdText.matchAll(/^##\s+(.+)$/gm)];
+      if (!matches.length) { $('#eProblem').value = mdText.trim(); return; }
+      for (let i = 0; i < matches.length; i++) {
+        const heading = matches[i][0];
+        const start = matches[i].index + heading.length;
+        const end = i + 1 < matches.length ? matches[i + 1].index : mdText.length;
+        const body = mdText.slice(start, end).trim();
+        const found = map.find(([, re]) => re.test(heading));
+        if (found && body && body !== '_미작성_') $('#' + found[0]).value = body;
+      }
+    }
+
+    function downloadFile(name, content, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    /* ================= PROJECT ADD/EDIT MODAL ================= */
+    const modal = $('#modal'), form = $('#form'), errEl = $('#formError');
+    form.slot.innerHTML = SAAS_SLOTS.map(s => `<option value="${s.id}">${s.id}</option>`).join('');
+
+    function openProjectModal(proj = null, presetSlot = null) {
+      form.reset();
+      errEl.classList.add('hidden');
+      const editing = !!proj;
+      $('#modalTitle').textContent = editing ? 'SaaS 프로젝트 수정' : '새 SaaS 프로젝트 추가';
+      $('#submitBtn').textContent = editing ? '저장하기' : '추가하기';
+      form.id.value = editing ? proj.id : '';
+      form.year.value = editing ? (proj.year || 2026) : new Date().getFullYear();
+
+      if (editing) {
+        form.title.value = proj.title || '';
+        form.slot.value = SAAS_SLOTS.some(s => s.id === proj.slot) ? proj.slot : SAAS_SLOTS[0].id;
+        form.status.value = proj.status || '기획중';
+        form.desc.value = proj.desc || '';
+        form.target.value = proj.target || '';
+        form.pricing.value = proj.pricing || '';
+        form.tags.value = (proj.tags || []).join(', ');
+        form.live.value = proj.live || '';
+        form.source.value = proj.source || '';
+        form.planUrl.value = proj.planUrl || '';
+      } else {
+        form.slot.value = presetSlot || (state.slot !== '전체' ? state.slot : SAAS_SLOTS[0].id);
+        form.status.value = '기획중';
+      }
+
+      modal.classList.remove('hidden'); modal.classList.add('flex');
+      document.body.classList.add('modal-open');
+      setTimeout(() => form.title.focus(), 50);
+    }
+
+    function closeProjectModal() {
+      modal.classList.add('hidden'); modal.classList.remove('flex');
+      if ($('#prdModal').classList.contains('hidden')) document.body.classList.remove('modal-open');
+    }
+
+    /* ================= EVENTS ================= */
+    $('#year').textContent = new Date().getFullYear();
+    $('#openAdd').addEventListener('click', () => openProjectModal(null));
+    $('#toggleEmptySlots').addEventListener('click', () => { state.showEmpty = !state.showEmpty; renderFilters(); renderGrid(); });
+    $('#search').addEventListener('input', (e) => { state.q = e.target.value; renderGrid(); });
+
+    $('#statusFilters').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-status]'); if (!b) return;
+      state.status = b.dataset.status; renderFilters(); renderGrid();
+    });
+
+    $('#slotFilters').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-slot]'); if (!b) return;
+      state.slot = b.dataset.slot; renderFilters(); renderGrid();
+    });
+
+    $('#grid').addEventListener('click', (e) => {
+      const slideBtn = e.target.closest('[data-slide]');
+      if (slideBtn) {
+        const track = slideBtn.closest('section').querySelector('.slot-track');
+        const { size } = slotStep(track);
+        track.scrollBy({ left: slideBtn.dataset.slide === 'next' ? size : -size, behavior: 'smooth' });
+        return;
+      }
+      const addBtn = e.target.closest('[data-addslot]');
+      if (addBtn) { openProjectModal(null, addBtn.dataset.addslot); return; }
+
+      const prdBtn = e.target.closest('[data-prd]');
+      if (prdBtn) { openPrdModal(prdBtn.dataset.prd, 'read'); return; }
+
+      const editBtn = e.target.closest('[data-edit]');
+      if (editBtn) {
+        const p = projects.find(x => x.id === editBtn.dataset.edit);
+        if (p) openProjectModal(p);
+        return;
+      }
+
+      const delBtn = e.target.closest('[data-del]');
+      if (delBtn) {
+        const p = projects.find(x => x.id === delBtn.dataset.del);
+        if (p && confirm(`"${p.title}" 프로젝트와 기획서를 삭제할까요?`)) {
+          projects = projects.filter(x => x.id !== p.id);
+          saveData(); refresh(); toast('프로젝트를 삭제했어요.');
+        }
+      }
+    });
+
+    // PRD modal events
+    document.querySelectorAll('[data-prd-close]').forEach(b => b.addEventListener('click', closePrdModal));
+    $('#prdModal').addEventListener('click', (e) => { if (e.target === $('#prdModal')) closePrdModal(); });
+    document.querySelectorAll('.prd-tab').forEach(b => b.addEventListener('click', () => switchPrdTab(b.dataset.prdTab)));
+
+    $('#checklistBox').addEventListener('change', (e) => {
+      const cb = e.target.closest('[data-chk]'); if (!cb) return;
+      draftChecklist[cb.dataset.chk] = cb.checked;
+      renderChecklist();
+    });
+
+    $('#btnFillTemplate').addEventListener('click', () => {
+      const t = {
+        eProblem: '- 타깃 고객이 겪는 핵심 불편함:\n- 기존 대안의 한계:',
+        eFeatures: '- MVP 핵심 기능 1:\n- MVP 핵심 기능 2:\n- 핵심 사용자 흐름:',
+        eBusiness: '- 무료 vs 유료 플랜 차이:\n- 멀티테넌시 / 권한 격리 방식:\n- 사용량 측정(Metering) 기준:',
+        eArchitecture: '- 주요 테이블(ERD):\n- 핵심 API 엔드포인트:\n- AI/외부 연동 흐름:',
+        eDecisions: '- [선택] A 대신 B를 고른 이유:\n- [트레이드오프] 얻은 것과 감수한 것:',
+        eTroubleshooting: '- 문제:\n- 원인:\n- 해결:\n- 배운 점:',
+        ePitch: '- 3분 요약 (문제 → 아키텍처 → 핵심 구현 → 회고):\n- 예상 질문 Q1:\n  A1:'
+      };
+      let n = 0;
+      Object.entries(t).forEach(([id, val]) => { const el = $('#' + id); if (!el.value.trim()) { el.value = val; n++; } });
+      toast(n ? `빈 항목 ${n}개에 템플릿을 채웠어요.` : '모든 항목이 이미 작성되어 있어요.');
+    });
+
+    $('#btnSavePrd').addEventListener('click', () => {
+      const idx = projects.findIndex(x => x.id === activePrdId);
+      if (idx === -1) return;
+      projects[idx].prd = {
+        problem: $('#eProblem').value.trim(),
+        features: $('#eFeatures').value.trim(),
+        business: $('#eBusiness').value.trim(),
+        architecture: $('#eArchitecture').value.trim(),
+        decisions: $('#eDecisions').value.trim(),
+        troubleshooting: $('#eTroubleshooting').value.trim(),
+        pitch: $('#ePitch').value.trim()
+      };
+      projects[idx].checklist = { ...draftChecklist };
+      saveData();
+      refresh();
+      renderPrdReadView();
+      toast('기획서와 설명력 점검이 저장되었어요.');
+    });
+
+    $('#btnOpenEditFromPrd').addEventListener('click', () => {
+      const p = projects.find(x => x.id === activePrdId);
+      if (p) openProjectModal(p);
+    });
+
+    $('#btnCopyMd').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(buildMarkdownForActive()); toast('기획서 마크다운을 복사했어요.'); }
+      catch { toast('복사에 실패했어요. .md 저장 버튼을 이용해 주세요.'); }
+    });
+
+    $('#btnDownloadMd').addEventListener('click', () => {
+      const p = projects.find(x => x.id === activePrdId);
+      if (!p) return;
+      const slug = (p.title || 'plan').toLowerCase().replace(/[^a-z0-9가-힣-]+/g, '-').replace(/-+/g, '-').slice(0, 45);
+      downloadFile(`${slug}-PLAN.md`, buildMarkdownForActive(), 'text/markdown;charset=utf-8');
+      toast('기획서(.md) 파일을 저장했어요.');
+    });
+
+    $('#btnImportMd').addEventListener('click', () => $('#mdFileInput').click());
+    $('#mdFileInput').addEventListener('change', async (e) => {
+      const f = e.target.files?.[0]; if (!f) return;
+      parseMdIntoEditor(await f.text());
+      switchPrdTab('edit');
+      toast(`"${f.name}" 기획서를 불러왔어요. 저장 버튼을 눌러 반영하세요.`);
+      e.target.value = '';
+    });
+
+    // Project modal events
+    document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeProjectModal));
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeProjectModal(); });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      errEl.classList.add('hidden');
+      const v = Object.fromEntries(new FormData(form));
+      if (!v.title.trim() || !v.desc.trim()) {
+        errEl.textContent = '프로젝트명과 한 줄 소개는 필수 입력입니다.';
+        errEl.classList.remove('hidden');
+        return;
+      }
+      const tags = v.tags.split(',').map(s => s.trim()).filter(Boolean).slice(0, 8);
+      if (v.id) {
+        const idx = projects.findIndex(x => x.id === v.id);
+        if (idx !== -1) {
+          projects[idx] = {
+            ...projects[idx],
+            title: v.title.trim(), slot: v.slot, status: v.status, year: Number(v.year) || 2026,
+            desc: v.desc.trim(), target: v.target.trim(), pricing: v.pricing.trim(), tags,
+            live: v.live.trim(), source: v.source.trim(), planUrl: v.planUrl.trim()
+          };
+        }
+        toast('프로젝트 정보를 수정했어요.');
+      } else {
+        const newProj = {
+          id: 'saas-' + Date.now().toString(36),
+          title: v.title.trim(), slot: v.slot, status: v.status, year: Number(v.year) || 2026,
+          desc: v.desc.trim(), target: v.target.trim(), pricing: v.pricing.trim(), tags,
+          live: v.live.trim(), source: v.source.trim(), planUrl: v.planUrl.trim(),
+          prd: { problem: '', features: '', business: '', architecture: '', decisions: '', troubleshooting: '', pitch: '' },
+          checklist: {}
+        };
+        projects.unshift(newProj);
+        toast('새 SaaS 프로젝트를 추가했어요. 이제 기획서를 작성해 보세요!');
+      }
+      saveData(); refresh(); closeProjectModal();
+      if (activePrdId && v.id === activePrdId) openPrdModal(activePrdId, 'read');
+    });
+
+    // Export / Import JSON & Code
+    $('#btnExportJson').addEventListener('click', () => {
+      const dateStr = new Date().toISOString().slice(0, 10);
+      downloadFile(`owen-saas-archive-${dateStr}.json`, JSON.stringify(projects, null, 2), 'application/json;charset=utf-8');
+      toast('전체 보관함을 JSON으로 백업했어요.');
+    });
+
+    $('#btnImportJson').addEventListener('click', () => $('#jsonFileInput').click());
+    $('#jsonFileInput').addEventListener('change', async (e) => {
+      const f = e.target.files?.[0]; if (!f) return;
+      try {
+        const parsed = JSON.parse(await f.text());
+        if (!Array.isArray(parsed)) throw new Error();
+        if (!confirm(`불러온 ${parsed.length}개 프로젝트로 현재 목록을 교체할까요?`)) return;
+        projects = parsed; saveData(); refresh(); toast('백업을 불러왔어요.');
+      } catch { toast('유효한 JSON 백업 파일이 아니에요.'); }
+      e.target.value = '';
+    });
+
+    $('#btnCopyCode').addEventListener('click', async () => {
+      const snippet = 'const DEFAULT_PROJECTS = ' + JSON.stringify(projects, null, 2) + ';';
+      try { await navigator.clipboard.writeText(snippet); toast('GitHub index.html 반영용 DEFAULT_PROJECTS 코드를 복사했어요.'); }
+      catch { toast('복사에 실패했어요. 백업 버튼을 이용해 주세요.'); }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (!modal.classList.contains('hidden')) closeProjectModal();
+      else if (!$('#prdModal').classList.contains('hidden')) closePrdModal();
+    });
+
+    window.addEventListener('resize', () => $('#grid').querySelectorAll('.slot-track').forEach(updateSlotNav));
+
+    loadData();
+    refresh();
+  </script>
+</body>
+</html>
